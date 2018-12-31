@@ -56,23 +56,16 @@ const renderPlayer = (x, y) => {
 
   // input handler
   document.body.addEventListener("keydown", e => {
-    switch (e.code) {
-      case "ArrowUp":
-        if (gameData.position.y === 0) break;
-        renderPlayer(0, -1);
-        break;
-      case "ArrowRight":
-        if (gameData.position.x === 19) break;
-        renderPlayer(1, 0);
-        break;
-      case "ArrowDown":
-        if (gameData.position.y === 19) break;
-        renderPlayer(0, 1);
-        break;
-      case "ArrowLeft":
-        if (gameData.position.x === 0) break;
-        renderPlayer(-1, 0);
-        break;
-    }
+    const k = e.code;
+    const x = gameData.position.x;
+    const y = gameData.position.y;
+    if ((k === "KeyW" || k === "ArrowUp") && y !== 0)
+      renderPlayer(0, -1);
+    if ((k === "KeyD" || k === "ArrowRight") && x !== 19)
+      renderPlayer(1, 0);
+    if ((k === "KeyS" || k === "ArrowDown") && y !== 19)
+      renderPlayer(0, 1);
+    if ((k === "KeyA" || k === "ArrowLeft") && x !== 0)
+      renderPlayer(-1, 0);
   });
 })();
