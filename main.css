@@ -16,7 +16,7 @@ body {
   margin: auto;
   padding: 0;
   position: relative;
-  transform: scaleY(0.98);
+  /* transform: scaleY(0.98); */
 }
 
 .square {

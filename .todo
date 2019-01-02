@@ -1,3 +1,4 @@
 Grid Project:
-  ☐ Remove magic numbers 0 and 19 to allow expansion of game board in the future.
-  ☐ Add collectibles
+  ☐ (Tiles) Remove magic numbers 0 and 19 to allow expansion of game board in the future. @low 
+  ☐ (Tiles) Add collectibles @low 
+  ☐ Separate projects @high 
