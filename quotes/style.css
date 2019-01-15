@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.home {
+  background-color: white;
+  color: #333;
+  border-radius: 8px;
+  padding: 8px;
+  border: 2px solid black;
+  font-weight: bold;
+  text-decoration: none;
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  z-index: 100;
+}
+
+.home:hover,
+.home:active {
+  color: white;
+  background-color: #333;
+  border: 2px solid white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Phrases */
+.phrase {
+  color: black;
+  margin: 1rem;
+}
+
+.phrase:hover {
+  color: white;
+}

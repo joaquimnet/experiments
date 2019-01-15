@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, rgb(224, 224, 224), rgb(251, 251, 251));
+    text-align: center;
+}
+
+.home {
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    padding: 8px;
+    border: 2px solid #333333;
+    font-weight: bold;
+    text-decoration: none;
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    z-index: 100;
+}
+
+.home:hover,
+.home:active {
+    color: #333333;
+    background-color: white;
+    border: 2px solid #333333;
+    cursor: pointer;
+}
+
+/* Message */
+.message {
+    margin: 30vh 10vw;
+    font-size: 5rem;
+    font-family: 'Text Me One', sans-serif;
+    color: rosybrown;
+}
+
+@media only screen and (max-width: 680px) {
+  .message {
+    margin: 1rem;
+    font-size: 3rem;
+  }
+}

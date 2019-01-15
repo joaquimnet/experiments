@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Kurale|Quicksand:400,700');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css');
+
+* {
+     box-sizing: border-box;
+}
+
+body {
+     font-family: "Quicksand",sans-serif;
+     margin: 0;
+     padding: 0;
+     background: linear-gradient(to right, rgb(224, 224, 224), rgb(251, 251, 251));
+}
+
+.home {
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  padding: 8px;
+  border: 2px solid #333333;
+  font-weight: bold;
+  text-decoration: none;
+  /* position: fixed;
+  top: 8px;
+  right: 8px; */
+  z-index: 100;
+}
+
+.home:hover,
+.home:active {
+  color: #333333;
+  background-color: white;
+  border: 2px solid #333333;
+  cursor: pointer;
+}
+
+/* CSS Grid */
+.grid {
+  width: 100%;
+  max-width: 1500px;
+  height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: [col-1-start] minmax(15rem, 1fr) [col-1-end col-2-start] 4fr [col-2-end];
+  grid-template-rows: [row-1-start] 1fr [row-1-end row-2-start] 8fr [row-2-end row-3-start] 1fr [row-3-end];
+  grid-template-areas: "header header" "sidebar main" "footer footer";
+}
+
+header {
+  background: #333;
+  grid-area: header;
+}
+
+aside {
+  background: #888;
+  grid-area: sidebar;
+}
+
+main {
+  background: #eee;
+  grid-area: main;
+  max-height: 8fr;
+}
+
+footer {
+  background: #333;
+  grid-area: footer;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.brand {
+  font-family: "Kurale", cursive, sans-serif;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Sidebar */
+.links {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0.5rem;
+  width: 100%;
+  height: calc(100% / 8);
+  border-bottom: 2px solid rgba(255,255,255,0.5);
+  color: white;
+  font-weight: bold;
+}
+
+.link:last-of-type {
+  border-bottom: none;
+}
+
+.link:hover {
+  background-color: rgba(255,255,255,0.2);
+  cursor: pointer;
+}
+
+/* Main */
+main {
+  padding: 0 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.article {
+  display: none;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  font-weight: bold;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}

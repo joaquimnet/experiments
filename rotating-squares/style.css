@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
+  height: 100vh;
+}
+
+.home {
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  padding: 8px;
+  border: 2px solid #333333;
+  font-weight: bold;
+  text-decoration: none;
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  z-index: 100;
+}
+
+.home:hover,
+.home:active {
+  color: #333333;
+  background-color: white;
+  border: 2px solid #333333;
+  cursor: pointer;
+}
+
+/* Squares */
+div {
+  margin: 0;
+  padding: 0;
+}
+
+.square:first-of-type {
+  height: 20vh;
+  width: 20vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: auto;
+  right: auto;
+  background-color: rgb(131, 23, 202);
+  transition: transform 2s linear;
+  transform-origin: center;
+}
+
+.square:nth-of-type(2) {
+  height: 20vh;
+  width: 20vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgb(211, 0, 63);
+  transition: transform 2s linear;
+  transform-origin: center;
+}
+
+.move-first.square:first-of-type {
+  transform: rotateY(720deg) translate(calc(100vw - 20vh), -80vh);
+}
+
+.move-last.square:nth-of-type(2) {
+  transform: rotateY(720deg) translate(calc(-100vw + 20vh), 80vh);
+}
+
+.lol {
+  position: fixed;
+  top: 200px;
+  left: 200px;
+  width: 100px;
+  height: 100px;
+  background: green;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
