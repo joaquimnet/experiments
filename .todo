@@ -1,5 +1,6 @@
 General:
   ✔ Separate projects @high @done (1/2/2019, 3:01:29 AM)
+  ☐ Redeploy clock and rainbow writer
 Grid Project:
   ☐ (Tiles) Remove magic numbers 0 and 19 to allow expansion of game board in the future. @low 
   ☐ (Tiles) Add collectibles @low 
