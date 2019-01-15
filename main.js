@@ -7,6 +7,7 @@ newProject("Coffee",pTypes.Lay,"coffee");
 newProject("Penguins",pTypes.Lay,"penguins");
 newProject("Grid", pTypes.Lay, "grid");
 newProject("Inventory", pTypes.Lay, "inventory");
+newProject("uHost", pTypes.Lay, "uHost");
 newProject("Leaf", pTypes.Ani, "leaf");
 newProject("Moving Squares", pTypes.Ani, "moving-squares");
 newProject("Rotating Squares", pTypes.Ani, "rotating-squares");
