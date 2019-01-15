@@ -1,6 +1,5 @@
---> JS Notes
+== Notes ==
 
-==DOM==
 To empty a dom element use:
 [javascript]
 while(element.firstChild) {
@@ -10,3 +9,16 @@ while(element.firstChild) {
 This way is much more efficient.
 https://jsperf.com/innerhtml-vs-removechild/37
 https://coderwall.com/p/nygghw/don-t-use-innerhtml-to-empty-dom-elements
+
+== Projects ==
+Games:
+---> Bets
+---> Brick Break
+---> Collector
+---> Text Adventure
+---> Tiles
+
+Applications:
+---> Clock
+---> Rainbow Writer
+---> Taskr
