@@ -1,0 +1,40 @@
+.day {
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .content {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "monday tuesday wednesday" "thursday friday saturday" "sunday sunday sunday";
+    grid-gap: 0.5rem;
+  }
+  .day {
+    padding: 0;
+  }
+  #sunday {
+    grid-area: sunday;
+  }
+}
+
+@media (min-width: 70rem) {
+  .content {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "monday tuesday wednesday thursday friday saturday sunday";
+    grid-gap: 0.5rem;
+  }
+  .day {
+    padding: 0;
+  }
+}
