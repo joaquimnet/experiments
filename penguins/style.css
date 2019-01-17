@@ -1,14 +1,15 @@
 * {
-  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-     box-sizing: border-box;
-     margin: 0;
-     padding: 0;
-     color: white;
-     text-align: center;
-     background-color: #333;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+  background-color: #333;
+  font-family: "Montserrat", sans-serif;
 }
 
 .home {
@@ -20,8 +21,8 @@ body {
   font-weight: bold;
   text-decoration: none;
   position: fixed;
-  top: 8px;
-  right: 8px;
+  bottom: 0;
+  right: 0;
   z-index: 100;
 }
 
@@ -41,86 +42,28 @@ a:active {
 }
 
 h1 {
-  font-family: 'Text Me One';
+  font-family: "Text Me One";
 }
 
 hr {
   width: 300px;
 }
 
-.penguin-holder {
-  position: relative;
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  width: 30%;
-}
-
-.penguin-image {
-  margin: 20px;
-  border-radius: 8%;
-  width: 30%;
-  min-width: 300px;
-  box-shadow: 2px 2px 6px 2px rgba(255, 255, 255, 0.3);
-}
-
-.cassidy {
-  position: absolute;
-  font-size: 60%;
-  bottom: 30px;
-  right: 60px;
-  display: inline-block;
-  color: #333;
-}
-
-.cassidy a {
-  color: gray;
-}
-
 p {
   margin: 0 0 16px 0;
 }
 
-.text {
-  width: 50%;
-  min-width: 500px;
-  margin: auto;
+.gallery-item {
+  position: relative;
 }
 
 .gallery-item-1,
+.gallery-item-1 img,
 .gallery-item-2,
-.gallery-item-3 {
-  margin: 20px;
-  width: 300px;
-  height: 300px;
-  display: inline-block;
-  position: relative;
-  border-radius: 2%;
-}
-
-.gallery-item-1 {
-  background: url('penguin-2.jpg') center/cover;
-}
-
-.gallery-item-3 {
-  background: url('penguin-3.jpg') center/cover;
-}
-
-.gallery-item-2 {
-  background: url('penguin-4.jpg') center/cover;
-}
-
-.penguin-gallery {
-  margin: 20px;
-  border-radius: 4%;
-  width: 30%;
-  display: inline-block;
-}
-
-.credit {
-  position: absolute;
-  font-size: 75%;
-  bottom: 0;
+.gallery-item-2 img,
+.gallery-item-3,
+.gallery-item-3 img {
+  width: 100%;
 }
 
 .footer {
@@ -131,4 +74,67 @@ a {
   text-decoration: none;
   color: white;
   font-weight: bold;
+}
+
+.penguin-holder,
+.penguin-holder img {
+  width: 100%;
+}
+
+.penguin-holder {
+  position: relative;
+  margin: 0.5rem 0;
+}
+
+.credit {
+  position: absolute;
+  font-size: 60%;
+  bottom: 1rem;
+  right: 1rem;
+  display: inline-block;
+  color: #eee;
+  text-shadow: 2px 1px 1px black;
+}
+
+@media (min-width: 40rem) {
+  .penguin-holder {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 30%;
+  }
+
+  .penguin-image {
+    margin: 20px;
+    border-radius: 8%;
+    width: 30%;
+    min-width: 300px;
+    box-shadow: 2px 2px 6px 2px rgba(255, 255, 255, 0.3);
+  }
+
+  .text {
+    width: 50%;
+    min-width: 500px;
+    margin: auto;
+  }
+  
+  .gallery-item {
+    border-radius: 4%;
+    width: 30%;
+    display: inline-block;
+    position: relative;
+  }
+
+  .credit {
+    position: absolute;
+    font-size: 75%;
+    bottom: 8px;
+  }
+
+  .home {
+    bottom: auto;
+    top: 8px;
+    right: 8px;
+  }
 }
