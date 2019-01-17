@@ -2,11 +2,13 @@ General:
   ✔ Separate projects @high @done (1/2/2019, 3:01:29 AM)
   ☐ Redeploy clock and rainbow writer
 Grid Project:
-  ☐ (Tiles) Remove magic numbers 0 and 19 to allow expansion of game board in the future. @low 
-  ☐ (Tiles) Add collectibles @low 
+  ✔ (Tiles) Remove magic numbers 0 and 19 to allow expansion of game board in the future. @low @done (1/16/2019, 11:58:16 PM)
+  ✔ (Tiles) Add collectibles @low @done (1/16/2019, 11:58:11 PM)
+  ☐ Expand map
+  ☐ Add multiple collectibles
 Brick Break Project:
   //
 Taskr Project:
-  ☐ Consider the filter when adding new tasks.
+  ✔ Consider the filter when adding new tasks. @done (1/16/2019, 10:24:06 PM)
 Week Project:
   ☐ Find out what this project is about
