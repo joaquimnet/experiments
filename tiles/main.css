@@ -15,22 +15,22 @@ body {
 .container {
   display: flex;
   flex-flow: row wrap;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
-  margin: auto;
+  margin: 0;
   padding: 0;
   position: relative;
-  transform: scaleY(0.98);
+  /* transform: scaleY(0.98); */
 }
 
 .square {
   background-color: #eee;
   width: 5vh;
   height: 5vh;
-  border: 0.5px solid #666;
+  border: 0.5px solid #ccc;
   /* border-right: 0.5px solid #666; */
   /* border-radius: 50% */
-  transform: rotate(45deg);
+  /* transform: rotate(45deg); */
 }
 
 /* .square[x="0"] {
