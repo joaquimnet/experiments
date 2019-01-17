@@ -24,13 +24,21 @@ body {
 }
 
 .square {
-  background-color: #eee;
   width: 5vh;
   height: 5vh;
-  border: 0.5px solid #ccc;
-  /* border-right: 0.5px solid #666; */
-  /* border-radius: 50% */
-  /* transform: rotate(45deg); */
+  background: url("img/white_square.svg") center/cover;
+}
+
+.item {
+  background: url("img/green_square.svg") center/cover;
+}
+
+.wall {
+  background: url("img/black_square.svg") center/cover;
+}
+
+.player {
+  background: url("img/blue_square.svg") center/cover;
 }
 
 /* .square[x="0"] {
