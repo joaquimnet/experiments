@@ -7,12 +7,13 @@ Tiles Project:
   ✔ Expand map @done (1/17/2019, 2:09:40 AM)
   ✔ Add multiple collectibles @done (1/17/2019, 1:03:56 AM)
   ☐ Keep score
-  ☐ Replace the current method of displaying squares with images
+  ✔ Replace the current method of displaying squares with images @done (1/17/2019, 7:18:42 PM)
   ☐ Add obstacles
-  ☐ Add a render function to render all the map entities
+  ✔ Add a render function to render all the map entities @done (1/17/2019, 7:18:45 PM)
   ☐ Separate the code into different files
+  ☐ Method to parse JSON into map topography
 Brick Break Project:
-  //
+  ☐ Add bricks
 Taskr Project:
   ✔ Consider the filter when adding new tasks. @done (1/16/2019, 10:24:06 PM)
 Week Project:
