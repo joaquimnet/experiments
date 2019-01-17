@@ -10,6 +10,7 @@ Tiles Project:
   ☐ Replace the current method of displaying squares with images
   ☐ Add obstacles
   ☐ Add a render function to render all the map entities
+  ☐ Separate the code into different files
 Brick Break Project:
   //
 Taskr Project:
