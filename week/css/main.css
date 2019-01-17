@@ -2,6 +2,27 @@
   padding: 1rem;
 }
 
+li span {
+  color: black;
+  font-weight: bold;
+}
+
+.JS {
+  text-shadow: 1px 1px orange;
+}
+
+.CSS,.Node {
+  text-shadow: 1px 1px green;
+}
+
+.Python {
+  text-shadow: 1px 1px goldenrod;
+}
+
+.React {
+  text-shadow: 1px 1px dodgerblue;
+}
+
 @media (min-width: 40rem) {
   .content {
     width: 100vw;
