@@ -1,11 +1,15 @@
 General:
   ✔ Separate projects @high @done (1/2/2019, 3:01:29 AM)
   ☐ Redeploy clock and rainbow writer
-Grid Project:
+Tiles Project:
   ✔ (Tiles) Remove magic numbers 0 and 19 to allow expansion of game board in the future. @low @done (1/16/2019, 11:58:16 PM)
   ✔ (Tiles) Add collectibles @low @done (1/16/2019, 11:58:11 PM)
-  ☐ Expand map
-  ☐ Add multiple collectibles
+  ✔ Expand map @done (1/17/2019, 2:09:40 AM)
+  ✔ Add multiple collectibles @done (1/17/2019, 1:03:56 AM)
+  ☐ Keep score
+  ☐ Replace the current method of displaying squares with images
+  ☐ Add obstacles
+  ☐ Add a render function to render all the map entities
 Brick Break Project:
   //
 Taskr Project:
