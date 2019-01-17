@@ -4,7 +4,7 @@ let menuOpen = false;
 
 const getContent = r => {
   document.querySelector(".main-content").innerHTML = "Loading...";
-  fetch(`/projects/coffee/${r}.html`)
+  fetch(`/coffee/${r}.html`)
     .then(e => {
       if (e.status.toString().includes("40")) {
         throw new Error("File not found");
