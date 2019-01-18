@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, intial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
     <title>Text Adventure</title>
   </head>
   <body>
-    <!-- New code here -->
-    <br>
-    <input type="text" class="input" placeholder="Type your command here"/>
-    <br>
-    <div class="options__container">
-      <!-- Options here -->
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m8 l6 offset-l3 offset-m2">
+          <input type="text" class="input" placeholder="Your command here" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6 l4 offset-l4 offset-m3">
+          <div class="options__container"><!-- Options here --></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <code> <p class="output"></p> </code>
+        </div>
+      </div>
     </div>
-    <code>
-      <p class="output"></p>
-    </code>
-    <!-- Shared -->
+
     <a class="home" href="../../index.html">Home</a>
-    <script type="text/javascript" src="main.js"></script>
+    <!-- Scripts -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
