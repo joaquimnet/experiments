@@ -33,6 +33,7 @@ class Item extends Entity {
     super(x, y, color);
   }
   onCollision() {
+    super.onCollision();
     console.log("B");
     this.position = {
       x: Math.floor(
@@ -44,13 +45,23 @@ class Item extends Entity {
   }
 }
 
-class Map {
+class GameMap {
   constructor(player) {
     this.verticalSize = 20;
     this.horizontalSize = Math.floor(
       window.innerWidth / (window.innerHeight / 20)
     );
     this.player = player;
+    this.Topo = new Map();
+  }
+  ParseTopo(json) {
+    const entries = JSON.parse(json);
+    entries.forEach(coordinate => {
+      this.Topo.set(
+        JSON.stringify({ x: coordinate.x, y: coordinate.y }),
+        coordinate.type
+      );
+    });
   }
   randomX() {
     return Math.floor(Math.random() * this.horizontalSize);
@@ -118,7 +129,18 @@ class Renderer {
     });
   }
 
+  RenderTopo() {
+    HELP.qSA(".wall").forEach(square => {
+      square.classList.remove("wall");
+    });
+    this.Map.Topo.forEach((type, coords) => {
+      let coordinates = JSON.parse(coords);
+      this.Map.getDomElementAt(coordinates.x, coordinates.y).classList.add(type);
+    });
+  }
+
   Render() {
+    this.RenderTopo();
     this.RenderPlayer();
     this.RenderItems();
   }
@@ -128,7 +150,7 @@ class Renderer {
 class Game {
   constructor() {
     this.Player = new Player(0, 0);
-    this.Map = new Map(this.Player);
+    this.Map = new GameMap(this.Player);
     this.Items = [];
     this.Renderer = new Renderer(this.Map, this.Player, this.Items);
 
@@ -154,8 +176,14 @@ class Game {
       this.Items.push(newItem);
     }
 
-    // First render
-    this.Renderer.Render();
+    fetch("/tiles/maps/map0.json")
+      .then(res => res.text())
+      .then(res => {
+        // Load map
+        this.Map.ParseTopo(res);
+        // First render
+        this.Renderer.Render();
+      });
 
     // Events
     document.body.addEventListener("keydown", e => this.onInput(e));
@@ -191,6 +219,11 @@ class Game {
     // current player position
     const pX = this.Player.position.x;
     const pY = this.Player.position.y;
+
+    // check for obstacles
+    if (this.Map.Topo.has(JSON.stringify({ x: pX + x, y: pY + y }))) {
+      return;
+    }
 
     // save new position
     this.Player.position = { x: pX + x, y: pY + y };
