@@ -8,10 +8,10 @@ Tiles Project:
   ✔ Add multiple collectibles @done (1/17/2019, 1:03:56 AM)
   ☐ Keep score
   ✔ Replace the current method of displaying squares with images @done (1/17/2019, 7:18:42 PM)
-  ☐ Add obstacles
+  ✔ Add obstacles @done (1/17/2019, 11:52:12 PM)
   ✔ Add a render function to render all the map entities @done (1/17/2019, 7:18:45 PM)
   ☐ Separate the code into different files
-  ☐ Method to parse JSON into map topography
+  ✔ Method to parse JSON into map topography @done (1/17/2019, 11:52:15 PM)
 Brick Break Project:
   ☐ Add bricks
 Taskr Project:
