@@ -12,6 +12,7 @@ Tiles Project:
   ✔ Add a render function to render all the map entities @done (1/17/2019, 7:18:45 PM)
   ☐ Separate the code into different files
   ✔ Method to parse JSON into map topography @done (1/17/2019, 11:52:15 PM)
+  ☐ Move items into a Entities array inside Map to facilitate future creation of new entities
 Brick Break Project:
   ☐ Add bricks
 Taskr Project:

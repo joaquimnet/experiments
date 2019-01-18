@@ -1,7 +1,7 @@
+// Template for entities
 class Entity {
-  constructor(x = 0, y = 0, color = "#000000") {
+  constructor(x = 0, y = 0) {
     this.position = { x, y };
-    this.color = color;
     this.isVisible = true;
   }
   getDomElement() {
@@ -15,19 +15,20 @@ class Entity {
     return element;
   }
   onCollision() {
-    console.log("A");
     if (this.isVisible === false) {
       return;
     }
   }
 }
 
+// The player class
 class Player extends Entity {
   constructor(x, y) {
     super(x, y, "dodgerblue");
   }
 }
 
+// The item class
 class Item extends Entity {
   constructor(x, y, color) {
     super(x, y, color);
@@ -45,6 +46,7 @@ class Item extends Entity {
   }
 }
 
+// Game map controller
 class GameMap {
   constructor(player) {
     this.verticalSize = 20;
@@ -95,6 +97,7 @@ class GameMap {
   }
 }
 
+// The renderer for displaying graphics on the map
 class Renderer {
   constructor(map, player, items) {
     this.Map = map;
@@ -102,6 +105,7 @@ class Renderer {
     this.items = items;
   }
 
+  // Render the player
   RenderPlayer() {
     HELP.qSA(".player").forEach(square => {
       square.classList.remove("player");
@@ -113,6 +117,7 @@ class Renderer {
     }
   }
 
+  // Render all items
   RenderItems() {
     HELP.qSA(".item").forEach(square => {
       square.classList.remove("item");
@@ -129,6 +134,7 @@ class Renderer {
     });
   }
 
+  // Renders map data
   RenderTopo() {
     HELP.qSA(".wall").forEach(square => {
       square.classList.remove("wall");
@@ -139,6 +145,7 @@ class Renderer {
     });
   }
 
+  // Main render method
   Render() {
     this.RenderTopo();
     this.RenderPlayer();
@@ -146,7 +153,7 @@ class Renderer {
   }
 }
 
-/* Game Data */
+/* The Main Game Class */
 class Game {
   constructor() {
     this.Player = new Player(0, 0);
@@ -264,4 +271,5 @@ class Game {
   }
 }
 
+// Start the game
 const GAME = new Game();
