@@ -39,6 +39,7 @@ body {
 
 .player {
   background: url("img/blue_square.svg") center/cover;
+  filter: saturate(500%)
 }
 
 /* .square[x="0"] {
