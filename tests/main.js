@@ -14,5 +14,13 @@ class World {
   }
 }
 
-const hello = new Hello();
-hello.world.explode();
+const mapi = new Map();
+
+mapi.set(JSON.stringify({x: 1, y: 2}), "wall");
+mapi.set(JSON.stringify({x: 1, y: 3}), "maa");
+
+//mapi.forEach(i => console.log(i));
+
+//console.log(mapi.entries());
+
+console.log(JSON.parse('[{"x": 1}, {"x": 2}]'));
