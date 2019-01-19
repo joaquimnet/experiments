@@ -14,6 +14,8 @@ Tiles Project:
   ✔ Method to parse JSON into map topography @done (1/17/2019, 11:52:15 PM)
   ☐ Move items into a Entities array inside Map to facilitate future creation of new entities
   ☐ Start working on a method to save and load game data to local storage
+Text Adventure Project:
+  ☐ Implement a method to load stories from json
 Brick Break Project:
   ☐ Add bricks
 Taskr Project:

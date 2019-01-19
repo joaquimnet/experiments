@@ -7,6 +7,7 @@ newProject("Bets",pTypes.G, "bets");
 newProject("Brick Break", pTypes.G, "brick-break");
 newProject("Collector", pTypes.G, "collector");
 newProject("Text Adventure", pTypes.G, "text-adventure");
+newProject("Text Adventure 2", pTypes.G, "text-adventure-2");
 newProject("Tiles", pTypes.G, "tiles");
 newProject("Clock", pTypes.A, "clock");
 newProject("Rainbow Writer", pTypes.A, "rainbow-writer");
