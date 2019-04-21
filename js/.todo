@@ -1,0 +1,26 @@
+General:
+  ✔ Separate projects @high @done (1/2/2019, 3:01:29 AM)
+  ☐ Redeploy clock and rainbow writer
+Tiles Project:
+  ✔ (Tiles) Remove magic numbers 0 and 19 to allow expansion of game board in the future. @low @done (1/16/2019, 11:58:16 PM)
+  ✔ (Tiles) Add collectibles @low @done (1/16/2019, 11:58:11 PM)
+  ✔ Expand map @done (1/17/2019, 2:09:40 AM)
+  ✔ Add multiple collectibles @done (1/17/2019, 1:03:56 AM)
+  ☐ Keep score
+  ✔ Replace the current method of displaying squares with images @done (1/17/2019, 7:18:42 PM)
+  ✔ Add obstacles @done (1/17/2019, 11:52:12 PM)
+  ✔ Add a render function to render all the map entities @done (1/17/2019, 7:18:45 PM)
+  ☐ Separate the code into different files
+  ✔ Method to parse JSON into map topography @done (1/17/2019, 11:52:15 PM)
+  ☐ Move items into a Entities array inside Map to facilitate future creation of new entities
+  ☐ Start working on a method to save and load game data to local storage
+Text Adventure Project:
+  ☐ Implement a method to load stories from json
+Brick Break Project:
+  ☐ Add bricks
+Taskr Project:
+  ✔ Consider the filter when adding new tasks. @done (1/16/2019, 10:24:06 PM)
+Week Project:
+  ✔ Find out what this project is about @done (1/17/2019, 5:08:23 AM)
+  ☐ Add more tasks
+  ☐ Make tasks editable

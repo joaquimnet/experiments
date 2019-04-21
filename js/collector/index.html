@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="animate.min.css" />
+    <title>Collector</title>
+  </head>
+
+  <body>
+    <!-- New code here -->
+    <div class="collectibles__background">
+      <div class="collectibles__container">
+        <div class="upgrade first">
+          <h1>Generator</h1>
+          <div class="generator__completed">
+            <hr />
+            <h1 class="completed">COMPLETED</h1>
+          </div>
+          <div class="generator__upgrading">
+            <small>Upgrade: <span class="generator__cost"></span></small>
+            <hr />
+            <span class="generator__level span">0</span>
+          </div>
+          <button class="generator__upgrade__btn">Upgrade</button>
+        </div>
+        <div class="upgrade second">
+          <h1>Collector</h1>
+          <div class="collector__upgrading">
+            <small>Upgrade: <span class="collector__cost"></span></small>
+            <hr />
+            <span class="collector__level span">0</span>
+          </div>
+          <div class="collector__completed">
+            <hr />
+            <h1 class="completed">COMPLETED</h1>
+          </div>
+          <button class="collector__upgrade__btn">Upgrade</button>
+        </div>
+        <div class="upgrade third">
+          <h1>Fortune</h1>
+          <hr />
+          <span class="fortune span">0</span>
+        </div>
+      </div>
+    </div>
+    <div class="field__background">
+      <div class="field__container">
+        <div class="message__start">
+          <h1>How to play</h1>
+          <p>
+            You upgrade your generator to produce more collectibles, and upgrade
+            your collector to collect them faster.
+          </p>
+          <p>
+            The game ends when you upgrade your generator and collector to 50.
+          </p>
+          <p><u>Try to do it as fast as you can.</u></p>
+          <small
+            >(Items collected by you are worth twice as much as if they were
+            picked by the collector.)</small
+          >
+          <p><b>Have fun!</b></p>
+        </div>
+        <div class="message__end">
+          <h1>Well done!</h1>
+          <h1>You did it in:</h1>
+          <h1 class="time">000</h1>
+          <p><small>(if you ask me thats pretty darn fast, good job)</small></p>
+        </div>
+      </div>
+    </div>
+    <!-- Shared -->
+    <a href="../../index.html" class="home">Home</a>
+    <script src="helper.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

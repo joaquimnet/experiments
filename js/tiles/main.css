@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: skyblue;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  /* transform: scaleY(0.98); */
+}
+
+.square {
+  width: 5vh;
+  height: 5vh;
+  background: url("img/white_square.svg") center/cover;
+}
+
+.item {
+  background: url("img/green_square.svg") center/cover;
+}
+
+.wall {
+  background: url("img/black_square.svg") center/cover;
+}
+
+.player {
+  background: url("img/blue_square.svg") center/cover;
+  filter: saturate(500%)
+}
+
+/* .square[x="0"] {
+  border-left: 1px solid #666;
+} */

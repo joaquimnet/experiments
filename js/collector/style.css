@@ -1,0 +1,159 @@
+/* Shared */
+* {
+  box-sizing: border-box;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, rgb(224, 224, 224), rgb(251, 251, 251));
+}
+
+.home {
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  padding: 8px;
+  border: 2px solid #333333;
+  font-weight: bold;
+  text-decoration: none;
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 100;
+}
+
+.home:hover,
+.home:active {
+  color: #333333;
+  background-color: white;
+  border: 2px solid #333333;
+  cursor: pointer;
+}
+
+/* Main */
+.collectibles__background {
+  width: 50vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #aaa;
+}
+
+.field__background {
+  width: 50vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #222;
+}
+
+.collectibles__container {
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  border-radius: 20px;
+  height: 80vh;
+  width: 40vw;
+  position: absolute;
+  left: 5vw;
+  top: 10vh;
+  overflow: scroll;
+}
+
+.field__container {
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  border-radius: 20px;
+  height: 80vh;
+  width: 40vw;
+  position: absolute;
+  right: 5vw;
+  top: 10vh;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+}
+
+span.generator__cost {
+  font-size: 1rem;
+}
+
+.generator__upgrading,
+.collector__upgrading {
+  margin: 0;
+  padding: 0;
+}
+
+.generator__completed,
+.collector__completed {
+  display: none;
+}
+
+.completed {
+  color: green;
+}
+
+.upgrade {
+  margin: auto;
+  display: inline-block;
+  width: 80%;
+}
+
+.upgrade h1 {
+  margin: 0.5rem 1rem;
+}
+
+.upgrade hr {
+  width: 50%;
+}
+
+.upgrade .span {
+  display: block;
+  font-size: 2rem;
+}
+
+.first {
+  height: 33%;
+}
+
+.second {
+  height: 33%;
+}
+
+.third {
+  height: 33%;
+}
+
+.message__end {
+  display: none;
+}
+
+.message__end h1 {
+  font-size: 3rem;
+}
+
+.message__end h1:first-of-type {
+  color: blue;
+  text-shadow: 2px 2px 2px darkblue;
+}
+
+.message__end h1:last-of-type {
+  color: lightgreen;
+  text-shadow: 2px 2px 2px green;
+}

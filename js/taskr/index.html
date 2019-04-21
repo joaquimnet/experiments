@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Taskr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <div id="main" class="card light-green lighten-5">
+            <div class="card-content">
+              <span class="card-title">Task List</span>
+              <div class="row">
+                <form id="task-form">
+                  <div class="input-field col s12">
+                    <input type="text" name="task" id="task"/>
+                    <label for="task">New Task</label>
+                  </div>
+                  <input type="submit" value="add" class="btn">
+                </form>
+              </div>
+            </div>
+            <div class="card-action">
+              <h5 id="task-title">Tasks</h5>
+              <div class="input-field col s12">
+                <input type="text" name="filter" id="filter"/>
+                <label for="filter">Filter tasks</label>
+              </div>
+              <ul class="collection">
+              </ul>
+              <a href="#!" class="clear-tasks btn black white-text">Clear Tasks</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="taskr.js"></script>
+  </body>
+</html>

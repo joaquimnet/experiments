@@ -1,0 +1,267 @@
+* {
+     box-sizing: border-box;
+}
+
+body {
+     font-family: sans-serif;
+     margin: 0;
+     padding: 0;
+     background: linear-gradient(to right, rgb(224, 224, 224), rgb(251, 251, 251));
+}
+
+.home {
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  padding: 8px;
+  border: 2px solid #333333;
+  font-weight: bold;
+  text-decoration: none;
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  z-index: 100;
+}
+
+.home:hover,
+.home:active {
+  color: #333333;
+  background-color: white;
+  border: 2px solid #333333;
+  cursor: pointer;
+}
+
+.controls {
+  width: 20vw;
+  height: 80vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ccc;
+  padding: 0;
+}
+
+.score {
+  width: 100vw;
+  height: 20vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #bbb;
+  padding: 0;
+}
+
+.display {
+  width: 80vw;
+  height: 80vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #333;
+  padding: 0;
+}
+
+.btn {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 33.3%;
+  font-size: 2rem;
+  margin: 0;
+  border-width: 0;
+  color: white;
+  background-color: #111;
+  outline-style: none;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #ccc;
+  color: #111;
+  border: 2px solid black;
+}
+
+.btn:active {
+  background-color: #bbb;
+}
+
+ul {
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+  height: 100%;
+}
+
+li {
+  font-size: 1.5rem;
+}
+
+li:first-of-type {
+  margin-bottom: 10px;
+}
+
+.ibs {
+  display: inline-block;
+  width: 10vw;
+}
+
+.player-score-item {
+  color: blue;
+}
+
+.computer-score-item {
+  color: brown;
+}
+
+.player-score,
+.computer-score {
+  font-weight: bold;
+}
+
+.info-container {
+  display: block;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+  font-family: sans-serif;
+  font-size: 2rem;
+}
+
+.info-howToPlay {
+  font-size: 1.5rem;
+  display: block;
+}
+
+.info-win {
+  color: green;
+  display: none;
+}
+
+.info-lost {
+  color: red;
+  font-size: 3rem;
+  display: none;
+}
+
+.start {
+  display: inline-block;
+  position: relative;
+  font-size: 3rem;
+  margin: 0;
+  border-width: 0;
+  color: white;
+  background-color: #111;
+  outline-style: none;
+  cursor: pointer;
+}
+
+.start:hover,
+.start:active {
+  background-color: #ccc;
+  color: #111;
+  border: 2px solid black;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 8% 0;
+  display: none;
+}
+
+.image img {
+  margin: 0;
+  width: 30%;
+}
+
+@media only screen and (max-width: 600px) {
+    /* For mobile: */
+    .controls {
+      width: 100%;
+      height: 20vh;
+      top: 0;
+      left: 0;
+    }
+
+    .score {
+      width: 100%;
+      height: 20vh;
+      bottom: 0;
+      left: 0;
+    }
+
+    .display {
+      width: 100%;
+      height: 60vh;
+      top: 20vh;
+      right: 0;
+    }
+
+    .btn {
+      width: calc(100vw/3);
+      height: 100%;
+      font-size: 2rem;
+      vertical-align: middle;
+      text-align: center;
+      float: left;
+    }
+
+    .info-howToPlay {
+      font-size: 1rem;
+      display: block;
+      margin-top: 0;
+      padding: 0;
+      overflow: scroll;
+      height: 60vh;
+    }
+
+    .info-container {
+      padding: 0;
+    }
+
+    .start {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      font-size: 2rem;
+      width: calc(100vw/3);
+      margin: 0;
+    }
+
+    .ibs {
+      width: 30vw;
+    }
+
+    li {
+      font-size: 1rem;
+    }
+
+    .image {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      padding: 20% 0;
+    }
+
+    .image img {
+      margin: 0;
+      width: 50%;
+    }
+
+    .home {
+      background-color: black;
+      color: white;
+      border-radius: 8px;
+      padding: 4px;
+      border: 2px solid #333333;
+      font-weight: bold;
+      text-decoration: none;
+      position: fixed;
+      top: inherit;
+      bottom: 0;
+      right: 0;
+      z-index: 100;
+    }
+}

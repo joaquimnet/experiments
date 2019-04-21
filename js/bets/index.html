@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Bets</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <a href="../../index.html" class="home">Home</a>
+    <div class="controls">
+        <button class="btn" onclick="playerAction('bet')">Bet</button>
+        <button class="btn" onclick="playerAction('pass')">Pass</button>
+        <button class="btn" onclick="playerAction('life')">Life</button>
+    </div>
+    <div class="score">
+        <ul>
+            <li>Score</li>
+            <li class="player-score-item"><span class="ibs">You</span><span class="player-score">000</span></li>
+            <li class="computer-score-item"><span class="ibs">Computer</span><span class="computer-score">000</span></li>
+        </ul>
+    </div>
+    <div class="display">
+        <div class="info-container">
+            <p class="info-howToPlay"><b>How to play</b><br />You have <u>3 seconds</u> to choose between <b>bet</b>, <b>pass</b> or <b>life</b>.<br />
+                If you choose <b>bet</b> and the bomb explodes you lose 50 points, if it doesn't explodes you gain 50 points.<br />
+                If you choose <b>pass</b> and the bomb explodes you gain 25 points, if the bomb doesn't explodes you lose 25 points.<br />
+                If you choose <b><u>life</u></b> and the bomb explodes you lose <b>all</b> your points, if the bomb doesn't explodes, your points <b>double</b>! But if your points are negative, life will reset your points to 0.<br />
+                <b>Have fun!</b></p>
+            <p class="info-win">WOW YOU WON! IMPRESSIVE!</p>
+            <p class="info-lost">YOU LOST, BLEH!</p>
+            <button class="start" onclick="startGame()">START</button>
+        </div>
+        <div class="image">
+            <img src="bomb.png" alt="">
+        </div>
+    </div>
+    <script src="index.js" type="text/javascript"></script>
+</body>
+
+</html>
