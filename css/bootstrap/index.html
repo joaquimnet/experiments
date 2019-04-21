@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="assets/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>css playground - bootstrap</title>
+  </head>
+  <body>
+    <div class="backgroundA"></div>
+    <div class="backgroundB"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <ul class="list-group mt-4 text-white text-center" id="list">
+            <button
+              class="list-group-item list-group-item-action bg-transparent"
+              data-toggle="modal"
+              data-target="#gridModal"
+            >
+              Grid
+            </button>
+            <button
+              class="list-group-item list-group-item-action bg-transparent"
+            >
+              Images
+            </button>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="gridModal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Grid</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Breaking it down, here’s how it works:</p>
+            <ul id="grid-breakdown">
+              <li>
+                Containers provide a means to center and horizontally pad your
+                site’s contents. Use
+                <code class="highlighter-rouge">.container</code> for a
+                responsive pixel width or
+                <code class="highlighter-rouge">.container-fluid</code> for
+                <code class="highlighter-rouge">width: 100%</code> across all
+                viewport and device sizes.
+              </li>
+              <li>
+                Rows are wrappers for columns. Each column has horizontal
+                <code class="highlighter-rouge">padding</code> (called a gutter)
+                for controlling the space between them. This
+                <code class="highlighter-rouge">padding</code> is then
+                counteracted on the rows with negative margins. This way, all
+                the content in your columns is visually aligned down the left
+                side.
+              </li>
+              <li>
+                In a grid layout, content must be placed within columns and only
+                columns may be immediate children of rows.
+              </li>
+              <li>
+                Thanks to flexbox, grid columns without a specified
+                <code class="highlighter-rouge">width</code> will automatically
+                layout as equal width columns. For example, four instances of
+                <code class="highlighter-rouge">.col-sm</code> will each
+                automatically be 25% wide from the small breakpoint and up. See
+                the auto-layout columns section for more examples.
+              </li>
+              <li>
+                Column classes indicate the number of columns you’d like to use
+                out of the possible 12 per row. So, if you want three
+                equal-width columns across, you can use
+                <code class="highlighter-rouge">.col-4</code>.
+              </li>
+              <li>
+                Column <code class="highlighter-rouge">width</code>s are set in
+                percentages, so they’re always fluid and sized relative to their
+                parent element.
+              </li>
+              <li>
+                Columns have horizontal
+                <code class="highlighter-rouge">padding</code> to create the
+                gutters between individual columns, however, you can remove the
+                <code class="highlighter-rouge">margin</code> from rows and
+                <code class="highlighter-rouge">padding</code> from columns with
+                <code class="highlighter-rouge">.no-gutters</code> on the
+                <code class="highlighter-rouge">.row</code>.
+              </li>
+              <li>
+                To make the grid responsive, there are five grid breakpoints,
+                one for each responsive breakpoint: all breakpoints (extra
+                small), small, medium, large, and extra large.
+              </li>
+              <li>
+                Grid breakpoints are based on minimum width media queries,
+                meaning
+                <strong
+                  >they apply to that one breakpoint and all those above
+                  it</strong
+                >
+                (e.g., <code class="highlighter-rouge">.col-sm-4</code> applies
+                to small, medium, large, and extra large devices, but not the
+                first <code class="highlighter-rouge">xs</code> breakpoint).
+              </li>
+              <li>
+                You can use predefined grid classes (like
+                <code class="highlighter-rouge">.col-4</code>) or Sass mixins
+                for more semantic markup.
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/app.js"></script>
+  </body>
+</html>
