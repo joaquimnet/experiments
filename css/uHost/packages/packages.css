@@ -1,0 +1,129 @@
+.background {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("../images/plans-background.jpg") center/cover;
+  filter: grayscale(60%);
+}
+
+main {
+  padding-top: 2rem;
+}
+
+.package {
+  position: relative;
+  z-index: 0;
+  width: 80%;
+  margin: 1rem 0;
+  border: 4px solid #00456a;
+  border-left: none;
+  background-color: #69caff;
+  overflow: hidden;
+  transform: translateY(0rem);
+  transition: transform 100ms ease;
+}
+
+.package:hover {
+  /*animation: slideUp 100ms ease forwards;*/
+  transform: translateY(-1rem);
+}
+
+.package:hover,
+.package:active {
+  border: 4px solid #ff3900;
+  border-left: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.package a {
+  display: block;
+  padding: 2rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.package__badge {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0.5rem;
+  color: white;
+  background-color: #ff3900;
+  font-size: 0.75rem;
+  transform: rotateZ(45deg) translateX(3.5rem) translateY(-1rem);
+  width: 12rem;
+  text-align: center;
+}
+
+.package__subtitle {
+  color: #777;
+}
+
+.package__description {
+  padding: 1rem;
+  color: #00456a;
+  border: 1px solid #00456a;
+  background-color: white;
+  font-family: "Work Sans", sans-serif;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.package__plus {
+  background-color: rgba(105, 202, 255, 0.95);
+}
+
+.package_free {
+  float: right;
+  border: 4px solid #00456a;
+  border-right: none;
+  background-color: rgba(173, 225, 252, 0.95);
+}
+
+.package__premium {
+  color: white;
+  background-color: rgba(0, 69, 106, 0.95);
+}
+
+#free_plan:hover,
+#free_plan:active {
+  border: 4px solid #ff3900;
+  border-right: none;
+}
+
+@media (min-width: 93rem) {
+  main {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .package {
+    border-left: 4px solid #00456a;
+  }
+  .package:hover,
+  .package:active {
+    border-left: 4px solid #ff3900;
+  }
+  .package_free {
+    border-right: 4px solid #00456a;
+  }
+  #free_plan:hover,
+  #free_plan:active {
+    border-right: 4px solid #ff3900;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0rem);
+  }
+  100% {
+    transform: translateY(-1rem);
+  }
+}

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="21.842119mm"
+   height="40.818859mm"
+   viewBox="0 0 21.842119 40.818859"
+   version="1.1"
+   id="svg2295"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="leaf-2.svg">
+  <defs
+     id="defs2289">
+    <linearGradient
+       gradientTransform="matrix(0.03527778,0,0,-0.03527778,-116.50973,396.25031)"
+       inkscape:collect="always"
+       xlink:href="#linearGradient394"
+       id="linearGradient2229"
+       x1="5864.4932"
+       y1="5663.395"
+       x2="6483.6401"
+       y2="5663.395"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       x1="0"
+       y1="0"
+       x2="1"
+       y2="0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1e-5,-494.38,2321.77,3e-5,5259.65,7041.71)"
+       spreadMethod="pad"
+       id="linearGradient394">
+      <stop
+         style="stop-opacity:1;stop-color:#7fcc2a"
+         offset="0"
+         id="stop376" />
+      <stop
+         style="stop-opacity:1;stop-color:#7fcc2a"
+         offset="0.140449"
+         id="stop378" />
+      <stop
+         style="stop-opacity:1;stop-color:#7fcc2b"
+         offset="0.426966"
+         id="stop380" />
+      <stop
+         style="stop-opacity:1;stop-color:#c9e776"
+         offset="0.74095444"
+         id="stop382" />
+      <stop
+         style="stop-opacity:1;stop-color:#c9e776"
+         offset="0.741573"
+         id="stop384" />
+      <stop
+         style="stop-opacity:1;stop-color:#dbed73"
+         offset="0.8849276"
+         id="stop386" />
+      <stop
+         style="stop-opacity:1;stop-color:#dbed73"
+         offset="0.898876"
+         id="stop388" />
+      <stop
+         style="stop-opacity:1;stop-color:#af4c4a"
+         offset="0.99948288"
+         id="stop390" />
+      <stop
+         style="stop-opacity:1;stop-color:#af4c4a"
+         offset="1"
+         id="stop392" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="50.595559"
+     inkscape:cy="81.101822"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1360"
+     inkscape:window-height="703"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata2292">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-90.37656,-176.0489)">
+    <path
+       d="m 98.497739,181.5226 c 0.309386,5.57566 -5.959122,14.26634 -6.333772,13.97776 1.095375,2.0119 5.334705,9.92259 6.655858,11.0871 -2.546703,-0.51188 -5.914672,-8.38058 -8.130469,-9.11119 -1.751542,8.33226 4.380089,12.90885 5.358341,19.39149 6.266393,-5.33964 8.174213,-16.59784 4.814003,-23.59342 5.65644,9.17222 2.31775,14.37322 -0.73483,22.95807 4.54377,-3.59199 9.06533,-7.79851 12.09181,-14.7768 -1.81152,2.05316 -3.36197,3.81458 -4.7946,3.37784 4.12326,-4.2111 4.36915,-10.74278 2.61937,-15.99459 -1.05269,1.49119 -1.17369,3.24238 -2.1904,4.84787 1.34691,-7.75617 -5.57106,-17.58985 -14.178489,-17.63783 3.62197,1.80305 4.689828,3.07517 4.823178,5.4737"
+       style="fill:url(#linearGradient2229);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.03527778"
+       id="path166"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/joaquim/Documents/Github/itspopon.github.io/projects/leaf/leaf-2.svg.png"
+       inkscape:export-xdpi="97.589996"
+       inkscape:export-ydpi="97.589996" />
+  </g>
+</svg>
