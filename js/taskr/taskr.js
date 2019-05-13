@@ -92,7 +92,7 @@ const loadEventListeners = () => {
     li.appendChild(del);
 
     // Check if it matches filter
-    if (text.toLowerCase.indexOf(filter.value.toLowerCase()) != -1) {
+    if (text.textContent.toLowerCase().indexOf(filter.value.toLowerCase()) != -1) {
       li.style.display = "block";
     } else {
       li.style.display = "none";
