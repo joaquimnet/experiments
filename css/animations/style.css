@@ -71,3 +71,26 @@ body {
     width: 90%;
   }
 }
+
+/* Animations */
+.animated {
+  transition: all .125s ease-in;
+}
+
+.fade {
+  opacity: 0;
+}
+
+.fade.on {
+  opacity: 1;
+}
+
+.rotate {
+  transform: rotate(0deg);
+  transition-duration: 5s;
+  transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.rotate.on {
+  transform: rotate(360deg);
+}

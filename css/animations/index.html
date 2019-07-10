@@ -11,25 +11,44 @@
   <body>
     <div class="container">
       <div class="box">
-        <span class="caption">Caption1</span>
+        <span class="caption animated fade" id="fade">Fade In</span>
+        <button class="show-button" onclick="startAnimation('fade')">Show</button>
+      </div>
+      <div class="box">
+        <span class="caption animated rotate" id="rotate">Rotate</span>
+        <button class="show-button" onclick="startAnimation('rotate')">Show</button>
+      </div>
+      <div class="box">
+        <span class="caption animated">Caption3</span>
         <button class="show-button">Show</button>
       </div>
       <div class="box">
-        <span class="caption">Caption2</span>
+        <span class="caption animated">Caption4</span>
         <button class="show-button">Show</button>
       </div>
       <div class="box">
-        <span class="caption">Caption3</span>
-        <button class="show-button">Show</button>
-      </div>
-      <div class="box">
-        <span class="caption">Caption4</span>
-        <button class="show-button">Show</button>
-      </div>
-      <div class="box">
-        <span class="caption">Caption5</span>
+        <span class="caption animated">Caption5</span>
         <button class="show-button">Show</button>
       </div>
     </div>
+    <script>
+      function startAnimation(name) {
+        console.log('Animate', name);
+        const caption = document.querySelector('#' + name);
+        if (caption) {
+          caption.classList.remove('animated');
+          caption.classList.remove('on');
+          setTimeout(() => {
+            caption.classList.add('animated');
+            caption.classList.add('on');
+          }, 200);
+        }
+      }
+      // document.querySelectorAll('.caption').forEach(element =>
+      //   element.addEventListener('transitionend', e => {
+      //     e.target.classList.remove('on');
+      //   })
+      // );
+    </script>
   </body>
 </html>

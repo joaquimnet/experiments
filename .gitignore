@@ -1,1 +1,14 @@
 css/bootstrap/assets/images/background
+
+js/vup/.DS_Store
+js/vup/node_modules/
+js/vup/dist/
+js/vup/npm-debug.log
+js/vup/yarn-error.log
+
+# Editor directories and files
+.ideas
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
