@@ -4,26 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="assets/favicon.png" />
     <link
+      href="https://fonts.googleapis.com/css?family=Lobster|Roboto:400,400i,700,700i&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
     />
     <link rel="stylesheet" href="assets/styles.css" />
     <title>Playground</title>
   </head>
   <body>
-    <div class="ui container grid red">
-      <h1>Welcome</h1>
-      <div class="ui row">
-        <div class="ui column green">Column 1a</div>
-        <div class="ui column blue">Column 1b</div>
-      </div>
-      <div class="ui row">
-        <div class="ui column orange">Column 2a</div>
-      </div>
+    <div class="background"></div>
+    <div class="loading"></div>
+    <div class="header">
+      <h1>Jq Nt Experiments</h1>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-    <script src="assets/nanoJS.js"></script>
-    <script src="assets/main.js"></script>
+    <div class="projects-container">
+      <ul class="projects"></ul>
+    </div>
+    <script src="assets/index.js"></script>
   </body>
 </html>

@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Coffee",
+    "category": "template",
+    "uri": "projects/coffee/"
+  },
+  {
+    "name": "Bets",
+    "category": "game",
+    "uri": "projects/bets/"
+  },
+  {
+    "name": "Taskr",
+    "category": "tool",
+    "uri": "projects/taskr/"
+  },
+  {
+    "name": "Text Adventure",
+    "category": "game",
+    "uri": "projects/text-adventure/"
+  },
+  {
+    "name": "Collector",
+    "category": "game",
+    "uri": "projects/collector/"
+  },
+  {
+    "name": "uHost",
+    "category": "template",
+    "uri": "projects/uHost/"
+  },
+  {
+    "name": "Grid",
+    "category": "template",
+    "uri": "projects/grid/"
+  },
+  {
+    "name": "Leaf",
+    "category": "css",
+    "uri": "projects/leaf/"
+  },
+  {
+    "name": "Moving Squares",
+    "category": "css",
+    "uri": "projects/moving-squares/"
+  },
+  {
+    "name": "Rotating Squares",
+    "category": "css",
+    "uri": "projects/rotating-squares/"
+  },
+  {
+    "name": "Tiles",
+    "category": "game",
+    "uri": "projects/tiles/"
+  },
+  {
+    "name": "Javascript",
+    "category": "javascript",
+    "uri": "projects/javascript/"
+  },
+  {
+    "name": "Text Adventure 2",
+    "category": "game",
+    "uri": "projects/text-adventure2/"
+  },
+  {
+    "name": "Penguins",
+    "category": "template",
+    "uri": "projects/penguins/"
+  },
+  {
+    "name": "Quotes",
+    "category": "css",
+    "uri": "projects/quotes/"
+  },
+  {
+    "name": "Reveal The Message",
+    "category": "css",
+    "uri": "projects/reveal-the-message/"
+  },
+  {
+    "name": "Inventory",
+    "category": "template",
+    "uri": "projects/inventory/"
+  },
+  {
+    "name": "Animations",
+    "category": "css",
+    "uri": "projects/animations/"
+  }
+]

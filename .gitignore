@@ -12,3 +12,6 @@ js/vup/yarn-error.log
 *.ntvs*
 *.njsproj
 *.sln
+
+# logs
+*.log
