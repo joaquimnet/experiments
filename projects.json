@@ -88,5 +88,10 @@
     "name": "Animations",
     "category": "css",
     "uri": "projects/animations/"
+  },
+  {
+    "name": "Learn English",
+    "category": "other",
+    "uri": "projects/learn-english/"
   }
 ]
