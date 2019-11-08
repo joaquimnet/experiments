@@ -93,5 +93,10 @@
     "name": "Learn English",
     "category": "other",
     "uri": "projects/learn-english/"
+  },
+  {
+    "name": "Drag And Drop",
+    "category": "javascript",
+    "uri": "projects/dragndrop/"
   }
 ]
