@@ -98,5 +98,10 @@
     "name": "Drag And Drop",
     "category": "javascript",
     "uri": "projects/dragndrop/"
+  },
+  {
+    "name": "Random",
+    "category": "javascript",
+    "uri": "projects/random/"
   }
 ]
