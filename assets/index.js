@@ -17,18 +17,31 @@ const create = (name, category, uri) => {
   return liTag;
 };
 
+const clearList = () => {
+  $('.projects').innerHTML = '';
+};
+
 function renderProjects(projects) {
   // Remove loading text
-  $('.loading').remove();
+  if ($('.loading')) {
+    $('.loading').remove();
+  }
+
+  clearList();
 
   // Render links
   projects.forEach(project => {
     const { name, category, uri } = project;
     $('.projects').appendChild(create(name, category, uri));
   });
+
+  console.log(`💡 Rendering ${projects.length} projects.`);
 }
 
 fetch('./projects.json')
   .then(res => res.json())
-  .then(renderProjects)
-  .catch(console.log);
+  .then(projects => {
+    window.projectList = projects;
+    renderProjects(projects);
+  })
+  .catch(console.error);
