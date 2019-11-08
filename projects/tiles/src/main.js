@@ -1,3 +1,5 @@
+import { query, $, $A, randomColor, randomNumber } from './util.js';
+
 // Template for entities
 class Entity {
   constructor(x = 0, y = 0) {
@@ -5,9 +7,7 @@ class Entity {
     this.isVisible = true;
   }
   getDomElement() {
-    const element = document.querySelector(
-      HELP.query(this.position.x, this.position.y)
-    );
+    const element = $(query(this.position.x, this.position.y));
     if (element === null) {
       console.warn('Entity is out of bounds.');
       return;
@@ -37,11 +37,8 @@ class Item extends Entity {
     super.onCollision();
     console.log('B');
     this.position = {
-      x: Math.floor(
-        Math.random() *
-          Math.floor(window.innerWidth / (window.innerHeight / 20))
-      ),
-      y: Math.floor(Math.random() * 20),
+      x: randomNumber(0, Math.floor(window.innerWidth / (window.innerHeight / 20))),
+      y: randomNumber(0, 20),
     };
   }
 }
@@ -50,19 +47,14 @@ class Item extends Entity {
 class GameMap {
   constructor(player) {
     this.verticalSize = 20;
-    this.horizontalSize = Math.floor(
-      window.innerWidth / (window.innerHeight / 20)
-    );
+    this.horizontalSize = Math.floor(window.innerWidth / (window.innerHeight / 20));
     this.player = player;
     this.Topo = new Map();
   }
   ParseTopo(json) {
     const entries = JSON.parse(json);
     entries.forEach(coordinate => {
-      this.Topo.set(
-        JSON.stringify({ x: coordinate.x, y: coordinate.y }),
-        coordinate.type
-      );
+      this.Topo.set(JSON.stringify({ x: coordinate.x, y: coordinate.y }), coordinate.type);
     });
   }
   randomX() {
@@ -75,16 +67,16 @@ class GameMap {
     return { x: this.randomX(), y: this.randomY() };
   }
   getDomElementAt(x, y) {
-    return document.querySelector(HELP.query(x, y));
+    return $(query(x, y));
   }
   getPlayerElement() {
-    return HELP.qS(HELP.query(this.player.position.x, this.player.position.y));
+    return $(query(this.player.position.x, this.player.position.y));
   }
   isSamePosition(pos1, pos2) {
     return pos1.x === pos2.x && pos1.y === pos2.y;
   }
   BuildGrid() {
-    const container = document.querySelector('.container');
+    const container = $('.container');
     for (let y = 0; y < 20; y++) {
       for (let x = 0; x < this.horizontalSize; x++) {
         const div = document.createElement('div');
@@ -107,7 +99,7 @@ class Renderer {
 
   // Render the player
   RenderPlayer() {
-    HELP.qSA('.player').forEach(square => {
+    $A('.player').forEach(square => {
       square.classList.remove('player');
     });
     try {
@@ -119,7 +111,7 @@ class Renderer {
 
   // Render all items
   RenderItems() {
-    HELP.qSA('.item').forEach(square => {
+    $A('.item').forEach(square => {
       square.classList.remove('item');
     });
     this.items.forEach(item => {
@@ -136,14 +128,12 @@ class Renderer {
 
   // Renders map data
   RenderTopo() {
-    HELP.qSA('.wall').forEach(square => {
+    $A('.wall').forEach(square => {
       square.classList.remove('wall');
     });
     this.Map.Topo.forEach((type, coords) => {
       let coordinates = JSON.parse(coords);
-      this.Map.getDomElementAt(coordinates.x, coordinates.y).classList.add(
-        type
-      );
+      this.Map.getDomElementAt(coordinates.x, coordinates.y).classList.add(type);
     });
   }
 
@@ -173,7 +163,7 @@ class Game {
 
     // spawn items
     for (let i = 0; i < 2; i++) {
-      const color = HELP.randomColor();
+      const color = randomColor();
       const pos = this.Map.randomXY();
       const newItem = new Item(pos.x, pos.y, color);
       if (i === 1) {
@@ -200,10 +190,8 @@ class Game {
   }
 
   onResizeWindow() {
-    const container = document.querySelector('.container');
-    let horizontalSize = Math.floor(
-      window.innerWidth / (window.innerHeight / 20)
-    );
+    const container = $('.container');
+    let horizontalSize = Math.floor(window.innerWidth / (window.innerHeight / 20));
     // checking if it has space for a new column
     if (this.Map.horizontalSize !== horizontalSize) {
       while (container.firstChild) {
@@ -255,16 +243,10 @@ class Game {
     if ((key === 'KeyW' || key === 'ArrowUp') && y !== 0) {
       this.MovePlayer(0, -1);
     }
-    if (
-      (key === 'KeyD' || key === 'ArrowRight') &&
-      x !== this.Map.horizontalSize - 1
-    ) {
+    if ((key === 'KeyD' || key === 'ArrowRight') && x !== this.Map.horizontalSize - 1) {
       this.MovePlayer(1, 0);
     }
-    if (
-      (key === 'KeyS' || key === 'ArrowDown') &&
-      y !== this.Map.verticalSize - 1
-    ) {
+    if ((key === 'KeyS' || key === 'ArrowDown') && y !== this.Map.verticalSize - 1) {
       this.MovePlayer(0, 1);
     }
     if ((key === 'KeyA' || key === 'ArrowLeft') && x !== 0) {
