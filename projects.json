@@ -103,5 +103,10 @@
     "name": "Random",
     "category": "javascript",
     "uri": "projects/random/"
+  },
+  {
+    "name": "Components",
+    "category": "css",
+    "uri": "projects/components/"
   }
 ]
