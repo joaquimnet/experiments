@@ -16,15 +16,170 @@
     <div class="page" id="welcome">
       <div class="page-title"><span>Welcome to Random!</span></div>
       <div class="page-body">
-        <h2>Available randomness:</h2>
-        <ul>
-          <li>Numbers</li>
-          <li>Strings</li>
-          <li>Color</li>
-          <li>Item Picker</li>
-        </ul>
+        <form>
+          <input type="text" placeholder="Press Enter to add item" />
+        </form>
+        <div class="items-to-pick-from"></div>
+        <div class="bottom-box">
+          <h1 class="result">...</h1>
+          <div class="instructions">
+            <p>Type something in the box above and press enter to add it to the list.</p>
+            <p class="no-mobile">
+              <b>Press <u>Ctrl+Enter</u> to pick a random item from the list.</b>
+            </p>
+            <p class="no-mobile">To clear the list press <u>Ctrl+Backspace</u></p>
+            <center>
+              <button class="btn pick-btn no-desktop">Pick</button>
+              <button class="btn clear-btn no-desktop">Clear</button>
+            </center>
+          </div>
+        </div>
       </div>
       <!-- <div class="page-footer"></div> -->
     </div>
+    <script>
+      // DOM STUFF
+      const o = query => {
+        const elements = document.querySelectorAll(query);
+        if (!elements.length) {
+          return null;
+        } else if (elements.length === 1) {
+          return elements[0];
+        } else {
+          return elements;
+        }
+      };
+
+      o.make = html => {
+        const div = document.createElement('div');
+        div.innerHTML = html;
+        const elements = div.children;
+        if (!elements.length) {
+          return null;
+        } else if (elements.length === 1) {
+          return elements[0];
+        } else {
+          return Array.from(elements);
+        }
+      };
+
+      o.css = (el, styles) => {
+        if (typeof styles === 'object') {
+          Object.keys(styles).forEach(rule => (el.style[rule] = styles[rule]));
+        }
+        return el;
+      };
+
+      o.sanitize = str => {
+        const temp = document.createElement('div');
+        temp.textContent = str;
+        return temp.innerHTML;
+      };
+
+      // APPLICATION STUFF
+      const stored = localStorage.getItem('itemsList');
+      let itemsToPickFrom = stored ? JSON.parse(stored) : [];
+
+      const removeItemEvt = function bruh(e) {
+        removeItem(Number(e.target.dataset.index));
+      };
+
+      const render = () => {
+        localStorage.setItem('itemsList', JSON.stringify(itemsToPickFrom));
+        const div = o('.items-to-pick-from');
+        while (div.firstChild) {
+          div.removeChild(div.firstChild);
+        }
+        const itemsHtml = itemsToPickFrom
+          .map(
+            (item, i) => `<div class="item" data-index="${i}">${i + 1}. ${o.sanitize(item)}</div>`,
+          )
+          .join('');
+
+        const itemsList = o.make(itemsHtml);
+        if (!itemsList) {
+          return;
+        }
+
+        if (Array.isArray(itemsList)) {
+          itemsList.forEach(el => {
+            el.addEventListener('click', removeItemEvt);
+            div.append(el);
+          });
+        } else {
+          itemsList.addEventListener('click', removeItemEvt);
+          div.append(itemsList);
+        }
+      };
+
+      function addItem(itemToAdd) {
+        if (typeof itemToAdd !== 'string') {
+          return;
+        }
+
+        const item = itemToAdd.trim();
+
+        if (!item.length) {
+          return;
+        }
+
+        itemsToPickFrom.push(item);
+        render();
+      }
+
+      function removeItem(index) {
+        if (Number.isNaN(index)) {
+          return;
+        }
+        if (index < 0 || index > itemsToPickFrom.length) {
+          return;
+        }
+        itemsToPickFrom = itemsToPickFrom.filter((v, i) => i !== index);
+        render();
+      }
+
+      function clearList() {
+        while (itemsToPickFrom.length) {
+          removeItem(0);
+        }
+      }
+
+      function pickItem() {
+        return itemsToPickFrom[Math.floor(Math.random() * itemsToPickFrom.length)];
+      }
+
+      function displayPickedItem(item) {
+        o('.result').textContent = item || '...';
+      }
+
+      o('form').addEventListener('submit', e => {
+        e.preventDefault();
+        const inp = o('input');
+        const newItem = inp.value;
+        inp.value = '';
+        addItem(newItem);
+      });
+
+      document.addEventListener('keyup', e => {
+        if (e.key === 'Backspace' && e.ctrlKey) {
+          clearList();
+        }
+        if (e.key !== 'Enter') {
+          return;
+        }
+        if (e.ctrlKey) {
+          const pickedItem = pickItem();
+          displayPickedItem(pickedItem);
+          return;
+        }
+
+        o('input').focus();
+      });
+
+      o('.pick-btn').addEventListener('click', () => displayPickedItem(pickItem()));
+      o('.clear-btn').addEventListener('click', () => clearList());
+
+      render();
+    </script>
   </body>
 </html>

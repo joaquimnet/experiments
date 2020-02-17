@@ -37,7 +37,7 @@ body {
 }
 
 .page-body {
-  background-color: rgb(185, 220, 223);
+  background-color: rgb(87, 87, 87);
   grid-area: body;
   padding: 1rem;
 }
@@ -45,4 +45,118 @@ body {
 .page-footer {
   background-color: blue;
   grid-area: footer;
+}
+
+input {
+  border-radius: 5px;
+  border: 5px solid cadetblue;
+  padding: 5px;
+  width: 50%;
+  margin: auto auto 1rem auto;
+  display: block;
+  font-size: 2rem;
+}
+
+input:focus {
+  border-color: cyan;
+}
+
+.items-to-pick-from {
+  display: flex;
+  flex-flow: column wrap;
+  width: 80%;
+  height: 30vh;
+  margin: auto;
+  overflow-x: hidden;
+}
+
+.item {
+  color: white;
+  font-size: 1.5rem;
+  display: inline-block;
+}
+
+.item:hover {
+  background-color: rgba(255, 255, 255, 0.1)
+}
+
+.bottom-box {
+  background-color: cornsilk;
+  width: 95%;
+  height: 10rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 2.5%;
+}
+
+.bottom-box .result {
+  color: cadetblue;
+  margin: 1rem;
+  max-width: 65%;
+}
+
+.bottom-box .instructions {
+  width: 30%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  color: cadetblue;
+}
+
+.btn {
+  width: 40%;
+  display: inline-block;
+  border: 2px solid cadetblue;
+  border-radius: 8px;
+  color: cadetblue;
+  padding: 3px;
+  margin: 1rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .no-desktop {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .no-mobile {
+    display: none;
+  }
+
+  .page-title {
+    justify-content: center;
+  }
+
+  input {
+    width: 95%;
+  }
+
+  .items-to-pick-from {
+    width: 100%;
+  }
+
+  .bottom-box {
+    height: 30%;
+  }
+
+  .bottom-box .result {
+    max-width: 100%;
+  }
+
+  .bottom-box .instructions {
+    width: auto;
+    height: auto;
+    display: block;
+    position: inherit;
+    margin: 0.5rem;
+    top: auto;
+    right: auto;
+  }
 }
