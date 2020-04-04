@@ -15,8 +15,8 @@
 
       body {
         background-color: rgb(255, 232, 235);
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-          'Helvetica Neue', sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
       }
 
       button {
@@ -58,7 +58,7 @@
         transform: scale(1.5) rotate(15deg);
       }
 
-      #bork {
+      #app-root {
         display: flex;
         width: 100vw;
         height: 100vh;
@@ -66,39 +66,70 @@
         align-items: center;
         flex-flow: column wrap;
       }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 6rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 4rem;
+        }
+      }
     </style>
   </head>
   <body>
-    <div id="bork"></div>
-    <button>♥</button>
+    <div id="app-root">
+      <h1>{{ selectedDay }}</h1>
+      <h1>{{ selectedMonth }}</h1>
+      <button @click="pick()">♥</button>
+    </div>
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.min.js"></script>
     <script>
-      const WEEK = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-      const MONTHS = [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December',
-      ];
-      const random = a => a[Math.floor(Math.random() * a.length)];
-      const bork = document.querySelector('#bork');
-
-      function load() {
-        bork.innerHTML = `<h1>${random(WEEK)}</h1><h1>${random(MONTHS)}</h1>`;
-      }
-
-      document.querySelector('button').addEventListener('click', () => {
-        load();
+      new Vue({
+        el: "#app-root",
+        data: {
+          WEEK_DAYS: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday",
+          ],
+          MONTH_NAMES: [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December",
+          ],
+          selectedDay: "",
+          selectedMonth: "",
+        },
+        methods: {
+          random(arr) {
+            return arr[Math.floor(Math.random() * arr.length)];
+          },
+          pick() {
+            this.selectedDay = this.random(this.WEEK_DAYS);
+            this.selectedMonth = this.random(this.MONTH_NAMES);
+          },
+        },
+        created() {
+          this.pick();
+        },
       });
-
-      load();
     </script>
   </body>
 </html>
