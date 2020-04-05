@@ -2,8 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-    'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 html,
@@ -33,7 +33,14 @@ body {
 .page-title span {
   vertical-align: middle;
   font-family: Raleway;
-  color: white;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.8),
+    rgba(95, 158, 160, 0.8)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .page-body {
@@ -49,7 +56,14 @@ body {
 
 input {
   border-radius: 5px;
-  border: 5px solid cadetblue;
+  border-width: 5px;
+  border-style: solid;
+  border-image: linear-gradient(
+      45deg,
+      rgba(202, 202, 202, 0.8),
+      rgba(95, 158, 160, 0.8)
+    )
+    1 / 5px 5px 5px 5px;
   padding: 5px;
   width: 50%;
   margin: auto auto 1rem auto;
