@@ -105,6 +105,11 @@
     "uri": "projects/random/"
   },
   {
+    "name": "Count Stuff",
+    "category": "javascript",
+    "uri": "projects/count-stuff/"
+  },
+  {
     "name": "Components",
     "category": "css",
     "uri": "projects/components/"
