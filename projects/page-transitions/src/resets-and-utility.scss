@@ -1,0 +1,19 @@
+// Resets
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.round {
+  border-radius: 50% !important;
+  overflow: hidden;
+}
+
+.sr-only {
+  opacity: 0;
+}
+
+.image-container img {
+  width: 100%;
+}

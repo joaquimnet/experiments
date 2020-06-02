@@ -113,5 +113,10 @@
     "name": "Components",
     "category": "css",
     "uri": "projects/components/"
+  },
+  {
+    "name": "Page Transitions",
+    "category": "css",
+    "uri": "projects/page-transitions/dist"
   }
 ]

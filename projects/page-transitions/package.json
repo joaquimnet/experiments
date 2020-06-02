@@ -1,0 +1,23 @@
+{
+  "targets": {
+    "browser": {
+      "context": "browser",
+      "publicUrl": "https://joaquimnet.github.io/experiments/projects/page-transitions/dist/",
+      "engines": {
+        "browsers": ["> 0.01%", "not dead"]
+      }
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "sass": "^1.26.7"
+  },
+  "scripts": {
+    "start": "rimraf dist && parcel serve src/index.html",
+    "build": "rimraf dist && parcel build src/index.html --no-cache"
+  },
+  "dependencies": {
+    "@dogstudio/highway": "^2.2.1",
+    "gsap": "^3.3.0"
+  }
+}

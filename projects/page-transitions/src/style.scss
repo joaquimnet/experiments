@@ -1,0 +1,146 @@
+@import './resets-and-utility.scss';
+
+// Colors
+$accent: cyan;
+$bg: #424455;
+$navbar-bg: darken(
+  $color: $bg,
+  $amount: 10%,
+);
+$text: white;
+// Sizes
+$navbar-height: 5rem;
+
+body {
+  // background-color: $bg;
+  background-image: linear-gradient(to top, adjust-color($color: $bg, $hue: 45deg) 0%, $bg 100%);
+  color: $text;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', 'Segoe UI', Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', sans-serif;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: calc(100vh - 5rem);
+  margin-top: $navbar-height;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  section {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  // .about {
+  //   justify-content: space-around;
+  // }
+}
+
+.navbar {
+  background-color: $navbar-bg;
+  width: 100vw;
+  height: $navbar-height;
+  position: fixed;
+  top: 0;
+  box-shadow: 1px 3px 5px 5px rgba(0, 0, 0, 0.1);
+  &-nav {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    list-style-type: none;
+  }
+  &-item {
+    display: block;
+    width: $navbar-height * 1.5;
+    height: $navbar-height;
+    transition: background-color 350ms ease-out;
+    &:hover {
+      background-color: lighten($color: $navbar-bg, $amount: 5%);
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: $accent;
+    }
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  text-decoration: underline;
+  text-shadow: 2px 2px 2px $accent;
+  text-align: center;
+  font-family: 'Righteous', cursive;
+  letter-spacing: 0.2rem;
+  a {
+    color: $text;
+    animation-name: link;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.6, 0.04, 0.68, 0.335);
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 2rem;
+  }
+}
+
+@keyframes link {
+  0% {
+    color: $text;
+  }
+  50% {
+    color: adjust-color($color: $bg, $hue: 45deg);
+  }
+  100% {
+    color: $accent;
+    text-shadow: 2px 2px 2px $text;
+  }
+}
+
+.hello {
+  width: 50%;
+  height: 40vh;
+  background: url('./hello.svg') center / contain no-repeat;
+  @media screen and (max-width: 600px) {
+    width: 90%;
+  }
+}
+
+.about {
+  h1 {
+    margin-top: 1rem;
+  }
+  .image-container {
+    border: 6px solid white;
+    width: 40vw;
+    height: 40vw;
+    max-width: 431px;
+    max-height: 431px;
+    padding: 6px;
+    margin: 0 auto;
+    @media screen and (max-width: 600px) {
+      width: 90vw;
+      height: 90vw;
+    }
+    .border {
+      box-shadow: 0 0 0 8px $accent;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      background: url(https://avatars1.githubusercontent.com/u/11339121?v=4) center/cover;
+    }
+  }
+}

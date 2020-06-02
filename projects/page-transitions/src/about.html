@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.scss" />
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon" />
+    <link rel="icon" href="./favicon.svg" type="image/x-icon" />
+    <script defer src="./index.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <title>Page Transitions</title>
+  </head>
+  <body>
+    <main data-router-wrapper class="container">
+      <section class="about" data-router-view="about">
+        <div class="image-container round">
+          <div class="border round"></div>
+          <div class="sr-only">Joaquim Neto's profile picture</div>
+        </div>
+        <h1><a href="https://github.com/joaquimnet" target="_blank">Joaquim</a> likes to write code.</h1>
+      </section>
+    </main>
+  </body>
+</html>
