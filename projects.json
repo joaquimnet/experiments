@@ -118,5 +118,10 @@
     "name": "Page Transitions",
     "category": "css",
     "uri": "projects/page-transitions/dist"
+  },
+  {
+    "name": "Before After",
+    "category": "css",
+    "uri": "projects/before-after/"
   }
 ]
