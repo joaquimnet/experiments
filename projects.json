@@ -17,12 +17,14 @@
   {
     "name": "Text Adventure",
     "category": "game",
-    "uri": "projects/text-adventure/"
+    "uri": "projects/text-adventure/",
+    "featured": true
   },
   {
     "name": "Collector",
     "category": "game",
-    "uri": "projects/collector/"
+    "uri": "projects/collector/",
+    "featured": true
   },
   {
     "name": "uHost",
@@ -122,6 +124,7 @@
   {
     "name": "Before After",
     "category": "css",
-    "uri": "projects/before-after/"
+    "uri": "projects/before-after/",
+    "featured": true
   }
 ]

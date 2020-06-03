@@ -1,47 +1,48 @@
+// Helper
 const $ = (el) => document.querySelector(el);
-const $c = (el) => document.createElement(el);
-const $a = (a, b) => a.appendChild(b);
+const $a = (el) => document.querySelectorAll(el);
 
-const create = (name, category, uri) => {
-  const aTag = $c('a');
-  aTag.setAttribute('href', uri);
-
-  const liTag = $c('li');
-  aTag.textContent = name;
-
-  const spanTag = $c('span');
-  spanTag.textContent = category;
-
-  $a(aTag, spanTag);
-  $a(liTag, aTag);
-  return liTag;
-};
-
-const clearList = () => {
-  $('.projects').innerHTML = '';
-};
-
-function renderProjects(projects) {
-  // Remove loading text
-  if ($('.loading')) {
-    $('.loading').remove();
-  }
-
-  clearList();
-
-  // Render links
-  projects.forEach((project) => {
-    const { name, category, uri } = project;
-    $('.projects').appendChild(create(name, category, uri));
-  });
-
-  console.log(`💡 Rendering ${projects.length} projects.`);
-}
-
+// Get the projects from the json file
 fetch('./projects.json')
   .then((res) => res.json())
   .then((projects) => {
     window.projectList = projects.sort((a, b) => a.category.localeCompare(b.category));
-    renderProjects(projects);
+    console.log(`💡 Rendering ${projects.length} projects.`);
+    renderProjects(projects.map(Project));
   })
   .catch(console.error);
+
+function renderProjects(projects) {
+  projects.forEach((p) => {
+    $('.project-list').appendChild(p);
+    p.querySelector('.see-code').addEventListener('click', (e) => {
+      window.open(
+        'https://github.com/joaquimnet/experiments/tree/master/' + e.target.dataset.uri,
+        '_blank',
+      );
+      e.stopPropagation();
+    });
+  });
+}
+
+function Project({ name, category, uri, featured = false }) {
+  const LI = document.createElement('LI');
+  LI.className = 'project';
+  LI.innerHTML = `
+  <div class="project-title${featured ? ' featured' : ''}">${name}</div>
+  <div class="project-category">${category}</div>
+  <div class="project-info">
+    <span class="see-code" data-uri="${uri}">See Code 📃</span> ☕
+  </div>
+  `;
+  LI.addEventListener('click', (e) => {
+    window.open('./' + uri, '_blank');
+  });
+  return LI;
+}
+
+// Banner spin
+$('.banner .logo').addEventListener('click', (e) => {
+  e.target.classList.add('animation', 'spin');
+  setTimeout(() => e.target.classList.remove('animation', 'spin'), 500);
+});
