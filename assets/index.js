@@ -1,5 +1,5 @@
-const $ = el => document.querySelector(el);
-const $c = el => document.createElement(el);
+const $ = (el) => document.querySelector(el);
+const $c = (el) => document.createElement(el);
 const $a = (a, b) => a.appendChild(b);
 
 const create = (name, category, uri) => {
@@ -30,7 +30,7 @@ function renderProjects(projects) {
   clearList();
 
   // Render links
-  projects.forEach(project => {
+  projects.forEach((project) => {
     const { name, category, uri } = project;
     $('.projects').appendChild(create(name, category, uri));
   });
@@ -39,9 +39,9 @@ function renderProjects(projects) {
 }
 
 fetch('./projects.json')
-  .then(res => res.json())
-  .then(projects => {
-    window.projectList = projects;
+  .then((res) => res.json())
+  .then((projects) => {
+    window.projectList = projects.sort((a, b) => a.category.localeCompare(b.category));
     renderProjects(projects);
   })
   .catch(console.error);
