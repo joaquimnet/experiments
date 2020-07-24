@@ -24,6 +24,12 @@
     "name": "Collector",
     "category": "game",
     "uri": "projects/collector/",
+    "featured": false
+  },
+  {
+    "name": "Collector 2",
+    "category": "game",
+    "uri": "projects/collector2/",
     "featured": true
   },
   {
