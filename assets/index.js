@@ -25,7 +25,7 @@ function renderProjects(projects) {
   });
 }
 
-function Project({ name, category, uri, featured = false }) {
+function Project({ name, category, uri, featured = false, description }) {
   const LI = document.createElement('LI');
   LI.className = 'project';
   LI.innerHTML = `

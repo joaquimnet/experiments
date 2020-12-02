@@ -10,14 +10,95 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/styles.css" />
-    <script defer src="assets/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     <title>Experiments</title>
   </head>
   <body>
-    <header class="banner"><span class="logo">Experiments</span></header>
-    <main class="container">
-      <ul class="project-list"></ul>
-    </main>
-    <footer>Last updated: June 3rd, 2020.</footer>
+    <div id="app">
+      <header class="banner">
+        <span class="logo show-up" @click="makeSpin">Experiments</span>
+      </header>
+      <main class="container">
+        <div
+          style="
+            width: 100%;
+            min-height: calc(90vh - var(--banner-height) * 2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+          "
+          v-if="projects.length === 0"
+        >
+          <h1>Loading...</h1>
+          <br />
+          <span class="animation spin2" style="font-size: 5rem">⌛</span>
+        </div>
+        <ul class="project-list">
+          <li class="project" v-for="project in projects" :data-featured="project.featured">
+            <div class="project-image">
+              <img :src="projectImageLink(project.name)" :alt="project.name" />
+            </div>
+            <div class="project-category" :data-category="project.category">
+              {{project.category}}
+            </div>
+            <div class="project-info">
+              <strong class="project-title">{{project.name}}</strong>
+              <span class="featured animation spin2" v-if="project.featured">⭐</span>
+              <hr />
+              <span class="project-description">{{project.description}}</span>
+              <div class="project-cta-buttons">
+                <a class="demo" :href="'./' + project.uri" target="_blank">Demo</a>
+                <a
+                  class="code"
+                  :href="'https://github.com/joaquimnet/experiments/tree/master/' + project.uri"
+                  target="_blank"
+                  >Code</a
+                >
+              </div>
+            </div>
+          </li>
+        </ul>
+      </main>
+      <footer>{{ footer }}</footer>
+    </div>
+    <script>
+      var $vm = new Vue({
+        el: '#app',
+        data: {
+          footer: 'Last updated: December 2nd, 2020',
+          projects: [],
+        },
+        methods: {
+          makeSpin: function (e) {
+            e.target.classList.add('animation', 'spin');
+            setTimeout(function () {
+              e.target.classList.remove('animation', 'spin');
+            }, 500);
+          },
+          projectImageLink(name) {
+            return 'https://identicon-api.herokuapp.com/' + name + '/256?format=png';
+          },
+        },
+        mounted: function () {
+          var logo = document.getElementsByClassName('logo')[0];
+          setTimeout(function () {
+            logo.classList.remove('show-up');
+          }, 1010);
+
+          fetch('https://raw.githubusercontent.com/joaquimnet/experiments/master/projects.json')
+            .then((res) => res.json())
+            .then((projects) => {
+              projects.sort((a, b) => {
+                if (a.featured) return -1;
+                return a.category.localeCompare(b.category);
+              });
+              console.log(`💡 Rendering ${projects.length} projects.`);
+              this.projects = projects;
+            })
+            .catch(console.error);
+        },
+      });
+    </script>
   </body>
 </html>
