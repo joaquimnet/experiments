@@ -1,7 +1,7 @@
 <h1 align="center">Experiments ⚡</h1>
 <div align="center">
 <a href="https://joaquimnet.github.io/experiments/" alt="Link to the experiments page">
-    <img src="https://raw.githubusercontent.com/joaquimnet/experiments/master/cddS2js.png" alt="CSS and JS Logo">
+    <img src="https://raw.githubusercontent.com/joaquimnet/experiments/master/cssS2js.png" alt="CSS and JS Logo">
   </a>
 </div>
 <p>
