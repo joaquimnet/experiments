@@ -2,135 +2,160 @@
   {
     "name": "Coffee",
     "category": "template",
-    "uri": "projects/coffee/"
+    "uri": "projects/coffee/",
+    "description": "A website template."
   },
   {
     "name": "Bets",
     "category": "game",
-    "uri": "projects/bets/"
+    "uri": "projects/bets/",
+    "description": "A simple betting game."
   },
   {
     "name": "Taskr",
-    "category": "tool",
-    "uri": "projects/taskr/"
+    "category": "app",
+    "uri": "projects/taskr/",
+    "description": "Yet another todo app."
   },
   {
     "name": "Text Adventure",
     "category": "game",
     "uri": "projects/text-adventure/",
+    "description": "A short text adventure game.",
     "featured": true
   },
   {
     "name": "Collector",
     "category": "game",
     "uri": "projects/collector/",
-    "featured": false
+    "description": "A clicking game."
   },
   {
     "name": "Collector 2",
     "category": "game",
     "uri": "projects/collector2/",
+    "description": "A clicking game, but better than the last one.",
     "featured": true
   },
   {
     "name": "uHost",
     "category": "template",
-    "uri": "projects/uHost/"
+    "uri": "projects/uHost/",
+    "description": "A website template."
   },
   {
     "name": "Grid",
     "category": "template",
-    "uri": "projects/grid/"
+    "uri": "projects/grid/",
+    "description": "A website template."
   },
   {
     "name": "Leaf",
     "category": "css",
-    "uri": "projects/leaf/"
+    "uri": "projects/leaf/",
+    "description": "A CSS experiment."
   },
   {
     "name": "Moving Squares",
     "category": "css",
-    "uri": "projects/moving-squares/"
+    "uri": "projects/moving-squares/",
+    "description": "A CSS experiment."
   },
   {
     "name": "Rotating Squares",
     "category": "css",
-    "uri": "projects/rotating-squares/"
+    "uri": "projects/rotating-squares/",
+    "description": "A CSS experiment."
   },
   {
     "name": "Tiles",
     "category": "game",
-    "uri": "projects/tiles/"
+    "uri": "projects/tiles/",
+    "description": "Game prototype using the DOM."
   },
   {
     "name": "Javascript",
     "category": "javascript",
-    "uri": "projects/javascript/"
+    "uri": "projects/javascript/",
+    "description": "Utility javascript snippets."
   },
   {
     "name": "Text Adventure 2",
     "category": "game",
-    "uri": "projects/text-adventure2/"
+    "uri": "projects/text-adventure2/",
+    "description": "A text adventure game (unfinished)."
   },
   {
     "name": "Penguins",
     "category": "template",
-    "uri": "projects/penguins/"
+    "uri": "projects/penguins/",
+    "description": "A website template."
   },
   {
     "name": "Quotes",
     "category": "css",
-    "uri": "projects/quotes/"
+    "uri": "projects/quotes/",
+    "description": "CSS experimentation."
   },
   {
     "name": "Reveal The Message",
     "category": "css",
-    "uri": "projects/reveal-the-message/"
+    "uri": "projects/reveal-the-message/",
+    "description": "CSS experimentation."
   },
   {
     "name": "Inventory",
     "category": "template",
-    "uri": "projects/inventory/"
+    "uri": "projects/inventory/",
+    "description": "CSS experimentation."
   },
   {
     "name": "Animations",
     "category": "css",
-    "uri": "projects/animations/"
+    "uri": "projects/animations/",
+    "description": "Collection of reusable animations."
   },
   {
     "name": "Learn English",
     "category": "other",
-    "uri": "projects/learn-english/"
+    "uri": "projects/learn-english/",
+    "description": "App to practice english."
   },
   {
     "name": "Drag And Drop",
     "category": "javascript",
-    "uri": "projects/dragndrop/"
+    "uri": "projects/dragndrop/",
+    "description": "Drag and drop experiment."
   },
   {
     "name": "Random",
-    "category": "javascript",
-    "uri": "projects/random/"
+    "category": "app",
+    "uri": "projects/random/",
+    "description": "App to pick a random item from a set."
   },
   {
     "name": "Count Stuff",
     "category": "javascript",
-    "uri": "projects/count-stuff/"
+    "uri": "projects/count-stuff/",
+    "description": "App to count stuff."
   },
   {
     "name": "Components",
     "category": "css",
-    "uri": "projects/components/"
+    "uri": "projects/components/",
+    "description": "Reusable html snippets."
   },
   {
     "name": "Page Transitions",
     "category": "css",
-    "uri": "projects/page-transitions/dist"
+    "uri": "projects/page-transitions/dist",
+    "description": "CSS experimentation."
   },
   {
     "name": "Before After",
     "category": "css",
     "uri": "projects/before-after/",
+    "description": "CSS experimentation.",
     "featured": true
   }
 ]
