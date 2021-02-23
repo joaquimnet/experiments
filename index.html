@@ -63,14 +63,14 @@
       <footer>{{ footer }}</footer>
     </div>
     <script>
-      var $vm = new Vue({
+      const $vm = new Vue({
         el: '#app',
         data: {
           footer: 'Last updated: December 2nd, 2020',
           projects: [],
         },
         methods: {
-          makeSpin: function (e) {
+          makeSpin(e) {
             e.target.classList.add('animation', 'spin');
             setTimeout(function () {
               e.target.classList.remove('animation', 'spin');
@@ -80,8 +80,8 @@
             return 'https://identicon-api.herokuapp.com/' + name + '/256?format=png';
           },
         },
-        mounted: function () {
-          var logo = document.getElementsByClassName('logo')[0];
+        mounted() {
+          const logo = document.getElementsByClassName('logo')[0];
           setTimeout(function () {
             logo.classList.remove('show-up');
           }, 1010);
