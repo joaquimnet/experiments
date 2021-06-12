@@ -1,0 +1,53 @@
+@import '../../styles/theme.scss';
+
+.Sidebar {
+  width: 273.49px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $color300;
+  border-top-right-radius: 50px;
+  z-index: 3;
+  user-select: none;
+}
+
+.SidebarShadow {
+  width: 273.49px;
+  height: 100vh;
+  transform: translateX(27px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $color400;
+  border-top-right-radius: 50px;
+  z-index: 2;
+}
+
+.Header {
+  width: 100%;
+  height: 79px;
+  padding-top: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Lobster, cursive;
+  font-size: 54px;
+  color: $color100;
+}
+
+.Divider {
+  width: 210px;
+  height: 7px;
+  background-color: $color100;
+  margin: auto;
+  margin: 20px auto 40px auto;
+}
+
+.Nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+}

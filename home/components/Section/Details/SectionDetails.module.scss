@@ -1,0 +1,59 @@
+@import '../../../styles/theme.scss';
+
+.Main {
+  width: calc(100%-300px);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 43px 0 0 343px;
+  position: relative;
+  margin: 0;
+}
+
+.Details {
+  width: 40%;
+  color: $color400;
+  & h2 {
+    font-weight: bold;
+    font-size: 64px;
+  }
+  & p {
+    font-size: 24px;
+  }
+}
+
+.Filters {
+  position: relative;
+  width: 55%;
+  height: 300px;
+  padding: 16px;
+  background: white;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  color: $color400;
+  & .Title {
+    font-weight: bold;
+    font-size: 36px;
+    margin: 8px;
+  }
+  & .Tags {
+    color: $color400;
+    margin: 8px;
+    max-width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    & span {
+      background: $color200;
+      font-weight: bold;
+      font-size: 24px;
+      text-transform: uppercase;
+      border-radius: 9.5px;
+      padding: 4px 8px;
+      margin: 0 14px 14px 0;
+      &.Active {
+        background: $color400;
+        color: $color200;
+      }
+    }
+  }
+}
