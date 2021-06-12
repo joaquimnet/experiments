@@ -1,14 +1,23 @@
 .Hero {
   width: 100vw;
-  overflow: hidden;
   height: 469px;
-  background: url('/experiments-hero.jpg') center/cover;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  & img {
-    width: 626px;
-    margin-left: 300px;
+  position: relative;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  & .HeroBackground {
+    z-index: -3;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
+}
+
+.Hero2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 300px;
 }

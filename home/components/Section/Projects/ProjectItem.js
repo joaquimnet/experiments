@@ -26,7 +26,7 @@ function ProjectItem({ project }) {
         </div>
         <div className={classes.ProjectButtons}>
           <Button
-            size='medium'
+            size='large'
             color='dark'
             mode='link'
             href={project.repositoryURL}
@@ -36,7 +36,7 @@ function ProjectItem({ project }) {
             CODE
           </Button>
           <Button
-            size='medium'
+            size='large'
             color='dark'
             mode='link'
             href={project.demoURL}
