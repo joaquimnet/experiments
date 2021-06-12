@@ -3,8 +3,9 @@ import slug from 'slugify';
 import Sidebar from '../components/Sidebar/Sidebar';
 import Hero from '../components/Hero/Hero';
 import SectionDetails from '../components/Section/Details/SectionDetails';
+import ProjectList from '../components/Section/Projects/ProjectList';
 
-const Home = ({ categories }) => (
+const Home = ({ projects, categories }) => (
   <>
     <Hero />
     <Sidebar categories={categories} />
@@ -14,6 +15,7 @@ const Home = ({ categories }) => (
         description={categories[0].description}
         tags={categories[0].tags}
       />
+      <ProjectList projects={projects} />
     </main>
   </>
 );
@@ -39,19 +41,19 @@ export function getStaticProps() {
         completedAt: new Date().toLocaleDateString(),
         startedAt: new Date().toLocaleDateString(),
         repositoryURL: 'https://github.com/joaquimnet/experiments',
-        demoURL: 'https://joaquimnet.dev/#/',
+        demoURL: 'https://joaquimneto.dev/#/',
         category: 'CSS',
         tags: ['layout', 'projects'],
       },
       {
         title: 'Framework Example',
         description:
-          "This is the example project, it has examples of projects I've completed so far.",
-        isFeatured: true,
+          "This is the example project, it has examples of projects I've completed so far. This is the example project, it has examples of projects I've completed so far.",
+        isFeatured: false,
         completedAt: new Date().toLocaleDateString(),
         startedAt: new Date().toLocaleDateString(),
         repositoryURL: 'https://github.com/joaquimnet/experiments',
-        demoURL: 'https://joaquimnet.dev/#/',
+        demoURL: 'https://joaquimneto.dev/#/',
         category: 'Frameworks',
         tags: ['react', 'vue'],
       },
@@ -59,11 +61,11 @@ export function getStaticProps() {
         title: 'Backend Example',
         description:
           "This is the example project, it has examples of projects I've completed so far.",
-        isFeatured: true,
+        isFeatured: false,
         completedAt: new Date().toLocaleDateString(),
         startedAt: new Date().toLocaleDateString(),
         repositoryURL: 'https://github.com/joaquimnet/experiments',
-        demoURL: 'https://joaquimnet.dev/#/',
+        demoURL: 'https://joaquimneto.dev/#/',
         category: 'Backend',
         tags: ['node', 'express'],
       },

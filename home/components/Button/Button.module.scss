@@ -1,0 +1,40 @@
+@import '../../styles/theme.scss';
+
+.Button {
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.Dark {
+  color: $color200;
+  background-color: $color400;
+  &:hover {
+    color: $color400;
+    background-color: $color200;
+  }
+}
+
+.Light {
+  color: $color400;
+  background-color: $color200;
+  &:hover {
+    color: $color200;
+    background-color: $color400;
+  }
+}
+
+.Small {
+  padding: 5px 10px;
+}
+
+.Medium {
+  padding: 7.5px 15px;
+}
+
+.Large {
+  padding: 10px 20px;
+}

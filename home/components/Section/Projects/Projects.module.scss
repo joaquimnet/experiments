@@ -1,0 +1,72 @@
+@import '../../../styles/theme.scss';
+
+.ProjectList {
+  width: 100%;
+  padding-left: 343px;
+  position: relative;
+  & .ProjectItem {
+    height: 300px;
+    width: 100%;
+    margin: 43px 0;
+    padding: 20px;
+    color: $color400;
+    background: $color100;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    &.Featured {
+      box-shadow: 4px 4px 16px rgba(238, 214, 0, 0.25);
+      &::before {
+        content: '⭐';
+        font-size: 48px;
+        position: absolute;
+        top: -24px;
+        left: 319px;
+        z-index: 5;
+        transform-origin: 50% 60%;
+        animation: spin 5s infinite linear;
+        @keyframes spin {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+    & .ThumbnailContainer {
+      width: 260px;
+      min-width: 260px;
+      height: 260px;
+      border-radius: 50px;
+    }
+    & .ProjectThumbnail {
+      border-radius: 50px;
+    }
+    & .ProjectDetails {
+      height: calc(100% - 10px);
+      padding-left: 20px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      align-items: space-between;
+    }
+    & .ProjectTitle {
+      font-size: 36px;
+    }
+    & .ProjectDescription {
+      font-size: 20px;
+    }
+    & .ProjectButtons {
+      padding-top: 10px;
+      & button,
+      a {
+        margin-right: 10px;
+      }
+    }
+  }
+}
