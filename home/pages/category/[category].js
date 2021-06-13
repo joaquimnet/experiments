@@ -1,5 +1,6 @@
 import slug from 'slugify';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 import Sidebar from '../../components/Sidebar/Sidebar';
 import Hero from '../../components/Hero/Hero';
@@ -16,6 +17,10 @@ function ProjectListing({ projects, categories }) {
 
   return (
     <>
+      <Head>
+        <title>Experiments - {currentCategory.title}</title>
+        <meta name='description' content={currentCategory.description} />
+      </Head>
       <Hero />
       <Sidebar categories={categories} activeCategory={slug(query.category, { lower: true })} />
       <main>
