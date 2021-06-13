@@ -34,6 +34,10 @@
   font-family: Lobster, cursive;
   font-size: 54px;
   color: $color100;
+  & a {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 .Divider {

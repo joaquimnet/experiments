@@ -27,6 +27,15 @@
   }
 }
 
+.Alternative {
+  color: $color100;
+  background-color: $color300;
+  &:hover {
+    color: $color300;
+    background-color: $color100;
+  }
+}
+
 .Small {
   padding: 5px 10px;
 }

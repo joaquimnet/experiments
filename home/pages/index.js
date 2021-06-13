@@ -1,21 +1,65 @@
 import slug from 'slugify';
 
+import classes from '../components/Section/Details/SectionDetails.module.scss';
+
 import Sidebar from '../components/Sidebar/Sidebar';
 import Hero from '../components/Hero/Hero';
 import SectionDetails from '../components/Section/Details/SectionDetails';
 import ProjectList from '../components/Section/Projects/ProjectList';
+import fetchProjectList from '../data/fetchProjectList';
+import Button from '../components/Button/Button';
 
 const Home = ({ projects, categories }) => (
   <>
     <Hero />
     <Sidebar categories={categories} />
-    <main>
-      <SectionDetails
-        category={categories[0].title}
-        description={categories[0].description}
-        tags={categories[0].tags}
-      />
-      <ProjectList projects={projects} />
+    <main style={{ justifyContent: 'space-around' }} className={classes.Main}>
+      <div style={{ width: '40%' }} className={classes.Details}>
+        <h2>Welcome</h2>
+        <p>
+          This is the page I showcase my coding experiments. Most of it is web development but I
+          have some other stuff here as well.
+        </p>
+      </div>
+      <div style={{ width: '40%' }} className={classes.Details}>
+        <p style={{marginBottom: '20px'}}>Feel free to reach out at:</p>
+        <Button
+          mode='link'
+          color='alternative'
+          target='_blank'
+          href='https://github.com/joaquimnet'
+          rel='noreferrer noopener'
+        >
+          Github
+        </Button>
+        <Button
+          mode='link'
+          color='alternative'
+          target='_blank'
+          href='https://twitter.com/joaquimnet_'
+          rel='noreferrer noopener'
+        >
+          Twitter
+        </Button>
+        <Button
+          mode='link'
+          color='alternative'
+          target='_blank'
+          href='mailto:joaquimmy@gmail.com'
+          rel='noreferrer noopener'
+        >
+          Email
+        </Button>
+        <Button
+          mode='link'
+          color='alternative'
+          target='_blank'
+          href='https://joaquimneto.dev/#/'
+          rel='noreferrer noopener'
+        >
+          Blog
+        </Button>
+      </div>
     </main>
   </>
 );
@@ -30,52 +74,8 @@ const Home = ({ projects, categories }) => (
 //   return { props: { projects }, revalidate: 3600 };
 // };
 
-export function getStaticProps() {
-  const experiments = {
-    projects: [
-      {
-        title: 'Example',
-        description:
-          "This is the example project, it has examples of projects I've completed so far.",
-        isFeatured: true,
-        completedAt: new Date().toLocaleDateString(),
-        startedAt: new Date().toLocaleDateString(),
-        repositoryURL: 'https://github.com/joaquimnet/experiments',
-        demoURL: 'https://joaquimneto.dev/#/',
-        category: 'CSS',
-        tags: ['layout', 'projects'],
-      },
-      {
-        title: 'Framework Example',
-        description:
-          "This is the example project, it has examples of projects I've completed so far. This is the example project, it has examples of projects I've completed so far.",
-        isFeatured: false,
-        completedAt: new Date().toLocaleDateString(),
-        startedAt: new Date().toLocaleDateString(),
-        repositoryURL: 'https://github.com/joaquimnet/experiments',
-        demoURL: 'https://joaquimneto.dev/#/',
-        category: 'Frameworks',
-        tags: ['react', 'vue'],
-      },
-      {
-        title: 'Backend Example',
-        description:
-          "This is the example project, it has examples of projects I've completed so far.",
-        isFeatured: false,
-        completedAt: new Date().toLocaleDateString(),
-        startedAt: new Date().toLocaleDateString(),
-        repositoryURL: 'https://github.com/joaquimnet/experiments',
-        demoURL: 'https://joaquimneto.dev/#/',
-        category: 'Backend',
-        tags: ['node', 'express'],
-      },
-    ],
-    categories: {
-      CSS: `Projects in this category are pages, snippets or sites I made to dive deep into the different aspects of CSS.\nThese might include layouts, animations, transitions and frontend components.`,
-      Frameworks: `Projects in this category are pages, snippets or sites I made to dive deep into the different aspects of CSS.\nThese might include layouts, animations, transitions and frontend components.`,
-      Backend: `Projects in this category are pages, snippets or sites I made to dive deep into the different aspects of CSS.\nThese might include layouts, animations, transitions and frontend components.`,
-    },
-  };
+export async function getStaticProps() {
+  const experiments = await fetchProjectList();
 
   const categories = Object.keys(experiments.categories).map((c) => ({
     title: c,
@@ -88,7 +88,7 @@ export function getStaticProps() {
   }));
 
   return {
-    revalidate: 1,
+    revalidate: 3600,
     props: {
       categories,
       projects: experiments.projects,

@@ -4,11 +4,13 @@ import classes from './Sidebar.module.scss';
 
 import NavItem from './NavItem';
 
-function Sidebar({ categories }) {
+function Sidebar({ categories, activeCategory }) {
   return (
     <>
       <aside className={classes.Sidebar}>
-        <div className={classes.Header}>Experiments</div>
+        <div className={classes.Header}>
+          <Link scroll={false} href='/'>Experiments</Link>
+        </div>
         <div className={classes.Divider} />
         <nav>
           <ul className={classes.Nav}>
@@ -17,7 +19,7 @@ function Sidebar({ categories }) {
                 key={category.title + '-' + category.uri}
                 href={'/category/' + category.uri}
                 text={category.title}
-                isActive={category.title === 'CSS'}
+                isActive={category.uri === activeCategory}
               />
             ))}
           </ul>

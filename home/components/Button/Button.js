@@ -11,6 +11,7 @@ function Button({ mode = 'button', color = 'dark', size = 'small', children, ...
       className={classNames(classes.Button, {
         [classes.Dark]: color === 'dark',
         [classes.Light]: color === 'light',
+        [classes.Alternative]: color === 'alternative',
         [classes.Small]: size === 'small',
         [classes.Medium]: size === 'medium',
         [classes.Large]: size === 'large',
